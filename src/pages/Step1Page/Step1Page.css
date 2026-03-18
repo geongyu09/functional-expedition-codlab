@@ -1,13 +1,58 @@
 .step1-page {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  height: 100vh;
+  background-color: #0d1117;
+  overflow: hidden;
 }
 
-.step1-page__title {
-  color: #FFFFFF;
-  font-size: 32px;
+.step1-page__body {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  overflow: hidden;
+}
+
+.step1-page__quiz-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  gap: 24px;
+  background-color: #0d1117;
+  overflow-y: auto;
+}
+
+.step1-page__divider {
+  width: 1px;
+  background-color: #30363d;
+  align-self: stretch;
+  flex-shrink: 0;
+}
+
+.step1-page__code-panel {
+  flex: 1;
+  overflow: hidden;
+}
+
+.step1-page__question-number {
+  color: #238636;
+  font-size: 12px;
   font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.step1-page__question-text {
+  color: #e6edf3;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.step1-page__options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }

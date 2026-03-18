@@ -1,0 +1,64 @@
+.code-panel {
+  display: flex;
+  flex-direction: column;
+  background-color: #0d1117;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.code-panel__header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background-color: #161b22;
+  border-bottom: 1px solid #30363d;
+  flex-shrink: 0;
+}
+
+.code-panel__filename {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: #e6edf3;
+}
+
+.code-panel__body {
+  padding: 20px 0;
+  overflow-x: auto;
+}
+
+.code-panel__line {
+  display: flex;
+  align-items: baseline;
+  min-height: 22px;
+}
+
+.code-panel__line-number {
+  font-family: 'Fira Code', monospace;
+  font-size: 13px;
+  color: #6e7681;
+  width: 48px;
+  text-align: right;
+  padding-right: 16px;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.code-panel__line-text {
+  font-family: 'Fira Code', monospace;
+  font-size: 13px;
+  line-height: 1.7;
+  white-space: pre;
+}
+
+.code-panel__line-text--comment {
+  color: #6a9955;
+}
+
+.code-panel__line-text--variable {
+  color: #9cdcfe;
+}
+
+.code-panel__line-text--normal {
+  color: #d4d4d4;
+}
