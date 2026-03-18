@@ -1,4 +1,4 @@
-import type { QuizOption, HintItem, ExplanationItem, CodeLine } from './types'
+import type { QuizOption, HintItem, ExplanationItem } from './types'
 
 export const QUIZ_QUESTION =
   'processOrder 함수에서 "액션"에 해당하는 줄은 몇 개일까요?'
@@ -54,96 +54,46 @@ export const EXPLANATION_SUMMARY =
 
 export const CODE_FILENAME = 'order.js'
 
-export const CODE_LINES: CodeLine[] = [
-  {
-    text: '// 주문을 처리하고 레시피를 발행하는 함수',
-    color: 'comment',
-  },
-  {
-    text: '// 입력: 주문하고 싶은 메뉴들, 내가 가지고 있는 금액(0원 이상)',
-    color: 'comment',
-  },
-  {
-    text: '// 출력: 주문한 메뉴들, 총 결제금액, 거스름 돈, 칼로리, 적립 포인트',
-    color: 'comment',
-  },
-  {
-    text: 'function processOrder(menuList, orderedMenus, money) {',
-    color: 'normal',
-  },
-  { text: '  // 구매 가능한 메뉴 필터링', color: 'comment' },
-  {
-    text: '  const availableMenus = filterMenuList(menuList, money);',
-    color: 'variable',
-  },
-  { text: '', color: 'normal' },
-  {
-    text: "  // '구매 가능한 메뉴' 중에서 주문한 메뉴 정보 가져오기",
-    color: 'comment',
-  },
-  {
-    text: '  const orderedItems = menuList.filter((menu) => availableMenus.includes(menu.name);',
-    color: 'variable',
-  },
-  { text: '', color: 'normal' },
-  { text: '  // 총 주문 금액 계산', color: 'comment' },
-  { text: '  let totalPrice = 0;', color: 'variable' },
-  {
-    text: '  for (let i = 0; i < orderedItems.length; i++) {',
-    color: 'normal',
-  },
-  { text: '    totalPrice += orderedItems[i].price;', color: 'normal' },
-  { text: '  }', color: 'normal' },
-  { text: '', color: 'normal' },
-  {
-    text: '  // 총 칼로리 계산 (유틸 함수 재사용을 유도하기 위해)',
-    color: 'comment',
-  },
-  {
-    text: "  // ❓ 칼로리 계산이 '주문'하는 책임에 포함될까?",
-    color: 'comment',
-  },
-  { text: '  let totalKcal = 0;', color: 'variable' },
-  {
-    text: '  for (let i = 0; i < orderedItems.length; i++) {',
-    color: 'normal',
-  },
-  { text: '    totalKcal += orderedItems[i].kcal;', color: 'normal' },
-  { text: '  }', color: 'normal' },
-  { text: '', color: 'normal' },
-  { text: '  // 적립 포인트 및 거스름돈 계산', color: 'comment' },
-  { text: '  const point = totalPrice * 0.1;', color: 'variable' },
-  { text: '  const change = money - totalPrice;', color: 'variable' },
-  { text: '', color: 'normal' },
-  { text: '  // 메뉴 이름만 추출', color: 'comment' },
-  { text: '  let orderedMenuNames = [];', color: 'variable' },
-  {
-    text: '  for (let i = 0; i < orderedItems.length; i++) {',
-    color: 'normal',
-  },
-  { text: '    orderedMenuNames.push(orderedItems[i].name);', color: 'normal' },
-  { text: '  }', color: 'normal' },
-  { text: '', color: 'normal' },
-  { text: '  // 최종 결과 출력', color: 'comment' },
-  {
-    text: '  console.log("주문 내역:", orderedMenuNames.join(", "));',
-    color: 'normal',
-  },
-  {
-    text: '  console.log("결제 금액:", totalPrice, "원");',
-    color: 'normal',
-  },
-  {
-    text: '  console.log("총 칼로리:", totalKcal, "kcal");',
-    color: 'normal',
-  },
-  { text: '  console.log("거스름돈:", change, "원");', color: 'normal' },
-  { text: '  console.log("적립 포인트:", point, "점");', color: 'normal' },
-  { text: '}', color: 'normal' },
-  { text: '', color: 'normal' },
-  { text: '// 실행 예시', color: 'comment' },
-  {
-    text: 'processOrder(menuList, ["볶음밥", "군만두", "냉우동"], 30000);',
-    color: 'normal',
-  },
-]
+export const CODE_SOURCE = `// 주문을 처리하고 레시피를 발행하는 함수
+// 입력: 주문하고 싶은 메뉴들, 내가 가지고 있는 금액(0원 이상)
+// 출력: 주문한 메뉴들, 총 결제금액, 거스름 돈, 칼로리, 적립 포인트
+function processOrder(menuList, orderedMenus, money) {
+  // 구매 가능한 메뉴 필터링
+  const availableMenus = filterMenuList(menuList, money);
+
+  // '구매 가능한 메뉴' 중에서 주문한 메뉴 정보 가져오기
+  const orderedItems = menuList.filter((menu) => availableMenus.includes(menu.name));
+
+  // 총 주문 금액 계산
+  let totalPrice = 0;
+  for (let i = 0; i < orderedItems.length; i++) {
+    totalPrice += orderedItems[i].price;
+  }
+
+  // 총 칼로리 계산 (유틸 함수 재사용을 유도하기 위해)
+  // ❓ 칼로리 계산이 '주문'하는 책임에 포함될까?
+  let totalKcal = 0;
+  for (let i = 0; i < orderedItems.length; i++) {
+    totalKcal += orderedItems[i].kcal;
+  }
+
+  // 적립 포인트 및 거스름돈 계산
+  const point = totalPrice * 0.1;
+  const change = money - totalPrice;
+
+  // 메뉴 이름만 추출
+  let orderedMenuNames = [];
+  for (let i = 0; i < orderedItems.length; i++) {
+    orderedMenuNames.push(orderedItems[i].name);
+  }
+
+  // 최종 결과 출력
+  console.log("주문 내역:", orderedMenuNames.join(", "));
+  console.log("결제 금액:", totalPrice, "원");
+  console.log("총 칼로리:", totalKcal, "kcal");
+  console.log("거스름돈:", change, "원");
+  console.log("적립 포인트:", point, "점");
+}
+
+// 실행 예시
+processOrder(menuList, ["볶음밥", "군만두", "냉우동"], 30000);`

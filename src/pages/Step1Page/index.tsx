@@ -4,7 +4,7 @@ import HintToggle from './components/HintToggle'
 import AnswerExplanation from './components/AnswerExplanation'
 import CodePanel from './components/CodePanel'
 import useQuiz from './hooks/useQuiz'
-import { QUIZ_QUESTION, QUIZ_OPTIONS, CORRECT_OPTION_ID, CODE_FILENAME, CODE_LINES } from './data'
+import { QUIZ_QUESTION, QUIZ_OPTIONS, CORRECT_OPTION_ID, CODE_FILENAME, CODE_SOURCE } from './data'
 import './Step1Page.css'
 
 function Step1Page() {
@@ -40,7 +40,7 @@ function Step1Page() {
         </div>
         <div className="step1-page__divider" />
         <div className="step1-page__code-panel">
-          <CodePanel filename={CODE_FILENAME} lines={CODE_LINES} />
+          <CodePanel filename={CODE_FILENAME} code={CODE_SOURCE} language="javascript" />
         </div>
       </div>
     </main>

@@ -15,7 +15,3 @@ export interface ExplanationItem {
   text: string
 }
 
-export interface CodeLine {
-  text: string
-  color: 'comment' | 'variable' | 'normal'
-}

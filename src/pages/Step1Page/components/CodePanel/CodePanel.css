@@ -51,14 +51,3 @@
   white-space: pre;
 }
 
-.code-panel__line-text--comment {
-  color: #6a9955;
-}
-
-.code-panel__line-text--variable {
-  color: #9cdcfe;
-}
-
-.code-panel__line-text--normal {
-  color: #d4d4d4;
-}
