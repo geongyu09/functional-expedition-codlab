@@ -37,6 +37,7 @@ function Step2Page() {
           <FullCodeView
             matchedMap={matchedMap}
             draggedBlockId={draggedBlockId}
+            isAllMatched={isAllMatched}
             onDragStart={handleDragStart}
             onDragEnd={handleDragEnd}
           />

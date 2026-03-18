@@ -63,6 +63,33 @@ export const FULL_FUNCTION_SEGMENTS: CodeSegment[] = [
   { id: 's7', type: 'static', code: '\n}\n\n// 실행 예시\nprocessOrder(menuList, ["볶음밥", "군만두", "냉우동"], 30000);' },
 ]
 
+export const ABSTRACTED_CODE = `function processOrder(menuList, orderedMenus, money) {
+  // 구매 가능한 메뉴 필터링
+  const availableMenus = filterMenuList(menuList, money);
+
+  // '구매 가능한 메뉴' 중에서 주문한 메뉴 정보 가져오기
+  const orderedItems = getOrderedItems(availableMenus, orderedMenus);
+
+  // 총 주문 금액 계산
+  const totalPrice = calculateTotalPrice(orderedItems);
+
+  // 총 칼로리 계산
+  const totalKcal = calculateTotalKcal(orderedItems);
+
+  // 적립 포인트 및 거스름돈 계산
+  const point = calculatePoint(totalPrice);
+  const change = calculateChange(money, totalPrice);
+
+  // 메뉴 이름만 추출
+  const orderedMenuNames = getMenuNames(orderedItems);
+
+  // 최종 결과 출력
+  printReceipt(orderedMenuNames, totalPrice, totalKcal, change, point);
+}
+
+// 실행 예시
+processOrder(menuList, ["볶음밥", "군만두", "냉우동"], 30000);`
+
 export const FUNCTION_SIGNATURES: FunctionSignature[] = [
   {
     id: 1,

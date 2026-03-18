@@ -1,14 +1,36 @@
-import { CODE_BLOCKS, FULL_FUNCTION_SEGMENTS } from '../../data'
+import { Highlight, themes } from 'prism-react-renderer'
+import { ABSTRACTED_CODE, CODE_BLOCKS, FULL_FUNCTION_SEGMENTS } from '../../data'
 import './FullCodeView.css'
 
 interface FullCodeViewProps {
   matchedMap: Record<number, number>
   draggedBlockId: number | null
+  isAllMatched: boolean
   onDragStart: (blockId: number, e: React.DragEvent) => void
   onDragEnd: () => void
 }
 
-function FullCodeView({ matchedMap, draggedBlockId, onDragStart, onDragEnd }: FullCodeViewProps) {
+function FullCodeView({ matchedMap, draggedBlockId, isAllMatched, onDragStart, onDragEnd }: FullCodeViewProps) {
+  if (isAllMatched) {
+    return (
+      <div className="full-code-view">
+        <Highlight theme={themes.vsDark} code={ABSTRACTED_CODE} language="javascript">
+          {({ className, style, tokens, getLineProps, getTokenProps }) => (
+            <pre className={`full-code-view__pre ${className}`} style={style}>
+              {tokens.map((line, i) => (
+                <div key={i} {...getLineProps({ line })}>
+                  {line.map((token, key) => (
+                    <span key={key} {...getTokenProps({ token })} />
+                  ))}
+                </div>
+              ))}
+            </pre>
+          )}
+        </Highlight>
+      </div>
+    )
+  }
+
   const matchedBlockIds = new Set(Object.values(matchedMap))
 
   const renderSegment = (segment: (typeof FULL_FUNCTION_SEGMENTS)[number]) => {
