@@ -1,0 +1,13 @@
+.step1-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.step1-page__title {
+  color: #FFFFFF;
+  font-size: 32px;
+  font-weight: 700;
+}
