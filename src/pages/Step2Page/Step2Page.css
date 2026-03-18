@@ -1,0 +1,93 @@
+.step2-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #0d1117;
+  overflow: hidden;
+}
+
+.step2-page__body {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  overflow: hidden;
+}
+
+.step2-page__divider {
+  width: 1px;
+  background-color: #30363d;
+  align-self: stretch;
+  flex-shrink: 0;
+}
+
+.step2-page__left-panel {
+  width: 520px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  gap: 12px;
+  background-color: #0d1117;
+  overflow-y: auto;
+}
+
+.step2-page__left-panel-title {
+  color: #8b949e;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+}
+
+.step2-page__right-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  gap: 12px;
+  overflow-y: auto;
+}
+
+.step2-page__right-panel-title {
+  color: #8b949e;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+}
+
+.step2-page__complete-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0d1f17;
+  border: 1px solid #238636;
+  border-radius: 8px;
+  padding: 16px 24px;
+  margin-bottom: 16px;
+  color: #3fb950;
+  font-weight: 600;
+}
+
+.step2-page__complete-banner p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.step2-page__next-button {
+  background-color: #238636;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.step2-page__next-button:hover {
+  background-color: #2ea043;
+}

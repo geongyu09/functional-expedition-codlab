@@ -4,7 +4,9 @@
       "Bash(bun add:*)",
       "Bash(bun run:*)",
       "Bash(bunx tsc:*)",
-      "Bash(bunx vite:*)"
+      "Bash(bunx vite:*)",
+      "Bash(npx tsc:*)",
+      "Bash(bun tsc:*)"
     ]
   }
 }

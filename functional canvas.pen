@@ -4812,7 +4812,7 @@
               "type": "frame",
               "id": "qBFWg",
               "name": "Quiz Panel",
-              "width": "fill_container",
+              "width": 436,
               "height": "fill_container",
               "fill": "#0D1117",
               "layout": "vertical",
@@ -4965,7 +4965,7 @@
                           "fill": "#E6EDF3",
                           "content": "order.js",
                           "fontFamily": "Inter",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -4987,7 +4987,7 @@
                       "fill": "#8B949E",
                       "content": "Drag blocks →",
                       "fontFamily": "Inter",
-                      "fontSize": 11,
+                      "fontSize": 13,
                       "fontWeight": "normal",
                       "fontStyle": "italic"
                     }
@@ -5025,7 +5025,7 @@
                           "content": "1",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -5038,7 +5038,7 @@
                           "content": "2",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -5051,7 +5051,7 @@
                           "content": "3",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -5064,7 +5064,7 @@
                           "content": "4",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -5077,7 +5077,7 @@
                           "content": "5",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -5090,7 +5090,7 @@
                           "content": "6",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -5103,7 +5103,7 @@
                           "content": "7",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -5116,7 +5116,7 @@
                           "content": "8",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -5129,7 +5129,7 @@
                           "content": "9",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -5142,7 +5142,7 @@
                           "content": "10",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -5155,7 +5155,7 @@
                           "content": "11",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -5168,7 +5168,7 @@
                           "content": "12",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -5181,7 +5181,7 @@
                           "content": "13",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -5194,7 +5194,7 @@
                           "content": "14",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -5207,7 +5207,7 @@
                           "content": "15",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -5220,7 +5220,7 @@
                           "content": "16",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -5233,7 +5233,7 @@
                           "content": "17",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -5246,7 +5246,7 @@
                           "content": "18",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -5259,7 +5259,7 @@
                           "content": "19",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -5272,7 +5272,7 @@
                           "content": "20",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -5285,7 +5285,7 @@
                           "content": "21",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -5298,7 +5298,7 @@
                           "content": "22",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -5311,7 +5311,7 @@
                           "content": "23",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -5324,7 +5324,7 @@
                           "content": "24",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -5337,7 +5337,7 @@
                           "content": "25",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -5350,7 +5350,7 @@
                           "content": "26",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -5363,7 +5363,7 @@
                           "content": "27",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -5376,7 +5376,7 @@
                           "content": "28",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -5389,7 +5389,7 @@
                           "content": "29",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -5402,7 +5402,7 @@
                           "content": "30",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -5415,7 +5415,7 @@
                           "content": "31",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -5428,7 +5428,7 @@
                           "content": "32",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -5441,7 +5441,7 @@
                           "content": "33",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -5454,7 +5454,7 @@
                           "content": "34",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -5467,7 +5467,7 @@
                           "content": "35",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -5480,7 +5480,7 @@
                           "content": "36",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -5493,7 +5493,7 @@
                           "content": "37",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -5506,7 +5506,7 @@
                           "content": "38",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -5519,7 +5519,7 @@
                           "content": "39",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -5532,7 +5532,7 @@
                           "content": "40",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -5545,7 +5545,7 @@
                           "content": "41",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         }
                       ]
@@ -5635,7 +5635,7 @@
                                   "fill": "#6A9955",
                                   "content": "// 주문을 처리하고 레시피를 발행하는 함수",
                                   "fontFamily": "Fira Code",
-                                  "fontSize": 11,
+                                  "fontSize": 13,
                                   "fontWeight": "normal"
                                 },
                                 {
@@ -5645,7 +5645,7 @@
                                   "fill": "#6A9955",
                                   "content": "// 입력: 주문하고 싶은 메뉴들, 금액(0원 이상)",
                                   "fontFamily": "Fira Code",
-                                  "fontSize": 11,
+                                  "fontSize": 13,
                                   "fontWeight": "normal"
                                 },
                                 {
@@ -5655,7 +5655,7 @@
                                   "fill": "#6A9955",
                                   "content": "// 출력: 주문한 메뉴들, 총 결제금액, 거스름돈...",
                                   "fontFamily": "Fira Code",
-                                  "fontSize": 11,
+                                  "fontSize": 13,
                                   "fontWeight": "normal"
                                 },
                                 {
@@ -5665,7 +5665,7 @@
                                   "fill": "#D4D4D4",
                                   "content": "function processOrder(menuList, orderedMenus, money) {",
                                   "fontFamily": "Fira Code",
-                                  "fontSize": 11,
+                                  "fontSize": 13,
                                   "fontWeight": "normal"
                                 },
                                 {
@@ -5675,7 +5675,7 @@
                                   "fill": "#6A9955",
                                   "content": "  // 구매 가능한 메뉴 필터링",
                                   "fontFamily": "Fira Code",
-                                  "fontSize": 11,
+                                  "fontSize": 13,
                                   "fontWeight": "normal"
                                 },
                                 {
@@ -5685,7 +5685,7 @@
                                   "fill": "#9CDCFE",
                                   "content": "  const availableMenus = filterMenuList(menuList, money);",
                                   "fontFamily": "Fira Code",
-                                  "fontSize": 11,
+                                  "fontSize": 13,
                                   "fontWeight": "normal"
                                 }
                               ]
@@ -5699,7 +5699,7 @@
                           "fill": "#D4D4D4",
                           "content": " ",
                           "fontFamily": "Fira Code",
-                          "fontSize": 11,
+                          "fontSize": 13,
                           "fontWeight": "normal"
                         },
                         {
@@ -5772,7 +5772,7 @@
                                   "fill": "#6A9955",
                                   "content": "  // '구매 가능한 메뉴' 중에서 주문한 메뉴 정보",
                                   "fontFamily": "Fira Code",
-                                  "fontSize": 11,
+                                  "fontSize": 13,
                                   "fontWeight": "normal"
                                 },
                                 {
@@ -5782,7 +5782,7 @@
                                   "fill": "#9CDCFE",
                                   "content": "  const orderedItems = menuList.filter(",
                                   "fontFamily": "Fira Code",
-                                  "fontSize": 11,
+                                  "fontSize": 13,
                                   "fontWeight": "normal"
                                 },
                                 {
@@ -5792,7 +5792,7 @@
                                   "fill": "#9CDCFE",
                                   "content": "    (menu) => availableMenus.includes(menu.name));",
                                   "fontFamily": "Fira Code",
-                                  "fontSize": 11,
+                                  "fontSize": 13,
                                   "fontWeight": "normal"
                                 }
                               ]
@@ -5806,7 +5806,7 @@
                           "fill": "#D4D4D4",
                           "content": " ",
                           "fontFamily": "Fira Code",
-                          "fontSize": 11,
+                          "fontSize": 13,
                           "fontWeight": "normal"
                         },
                         {
@@ -5879,7 +5879,7 @@
                                   "fill": "#6A9955",
                                   "content": "  // 총 주문 금액 계산",
                                   "fontFamily": "Fira Code",
-                                  "fontSize": 11,
+                                  "fontSize": 13,
                                   "fontWeight": "normal"
                                 },
                                 {
@@ -5889,7 +5889,7 @@
                                   "fill": "#9CDCFE",
                                   "content": "  let totalPrice = 0;",
                                   "fontFamily": "Fira Code",
-                                  "fontSize": 11,
+                                  "fontSize": 13,
                                   "fontWeight": "normal"
                                 },
                                 {
@@ -5899,7 +5899,7 @@
                                   "fill": "#D4D4D4",
                                   "content": "  for (let i = 0; i < orderedItems.length; i++) {",
                                   "fontFamily": "Fira Code",
-                                  "fontSize": 11,
+                                  "fontSize": 13,
                                   "fontWeight": "normal"
                                 },
                                 {
@@ -5909,7 +5909,7 @@
                                   "fill": "#D4D4D4",
                                   "content": "    totalPrice += orderedItems[i].price;",
                                   "fontFamily": "Fira Code",
-                                  "fontSize": 11,
+                                  "fontSize": 13,
                                   "fontWeight": "normal"
                                 },
                                 {
@@ -5919,7 +5919,7 @@
                                   "fill": "#D4D4D4",
                                   "content": "  }",
                                   "fontFamily": "Fira Code",
-                                  "fontSize": 11,
+                                  "fontSize": 13,
                                   "fontWeight": "normal"
                                 }
                               ]
@@ -5933,7 +5933,7 @@
                           "fill": "#D4D4D4",
                           "content": " ",
                           "fontFamily": "Fira Code",
-                          "fontSize": 11,
+                          "fontSize": 13,
                           "fontWeight": "normal"
                         },
                         {
@@ -6006,7 +6006,7 @@
                                   "fill": "#6A9955",
                                   "content": "  // 총 칼로리 계산",
                                   "fontFamily": "Fira Code",
-                                  "fontSize": 11,
+                                  "fontSize": 13,
                                   "fontWeight": "normal"
                                 },
                                 {
@@ -6016,7 +6016,7 @@
                                   "fill": "#6A9955",
                                   "content": "  // ❓ 칼로리 계산이 '주문' 책임에 포함될까?",
                                   "fontFamily": "Fira Code",
-                                  "fontSize": 11,
+                                  "fontSize": 13,
                                   "fontWeight": "normal"
                                 },
                                 {
@@ -6026,7 +6026,7 @@
                                   "fill": "#9CDCFE",
                                   "content": "  let totalKcal = 0;",
                                   "fontFamily": "Fira Code",
-                                  "fontSize": 11,
+                                  "fontSize": 13,
                                   "fontWeight": "normal"
                                 },
                                 {
@@ -6036,7 +6036,7 @@
                                   "fill": "#D4D4D4",
                                   "content": "  for (let i = 0; i < orderedItems.length; i++) {",
                                   "fontFamily": "Fira Code",
-                                  "fontSize": 11,
+                                  "fontSize": 13,
                                   "fontWeight": "normal"
                                 },
                                 {
@@ -6046,7 +6046,7 @@
                                   "fill": "#D4D4D4",
                                   "content": "    totalKcal += orderedItems[i].kcal;",
                                   "fontFamily": "Fira Code",
-                                  "fontSize": 11,
+                                  "fontSize": 13,
                                   "fontWeight": "normal"
                                 },
                                 {
@@ -6056,7 +6056,7 @@
                                   "fill": "#D4D4D4",
                                   "content": "  }",
                                   "fontFamily": "Fira Code",
-                                  "fontSize": 11,
+                                  "fontSize": 13,
                                   "fontWeight": "normal"
                                 }
                               ]
@@ -6070,7 +6070,7 @@
                           "fill": "#D4D4D4",
                           "content": " ",
                           "fontFamily": "Fira Code",
-                          "fontSize": 11,
+                          "fontSize": 13,
                           "fontWeight": "normal"
                         },
                         {
@@ -6143,7 +6143,7 @@
                                   "fill": "#6A9955",
                                   "content": "  // 적립 포인트 및 거스름돈 계산",
                                   "fontFamily": "Fira Code",
-                                  "fontSize": 11,
+                                  "fontSize": 13,
                                   "fontWeight": "normal"
                                 },
                                 {
@@ -6153,7 +6153,7 @@
                                   "fill": "#9CDCFE",
                                   "content": "  const point = totalPrice * 0.1;",
                                   "fontFamily": "Fira Code",
-                                  "fontSize": 11,
+                                  "fontSize": 13,
                                   "fontWeight": "normal"
                                 },
                                 {
@@ -6163,7 +6163,7 @@
                                   "fill": "#9CDCFE",
                                   "content": "  const change = money - totalPrice;",
                                   "fontFamily": "Fira Code",
-                                  "fontSize": 11,
+                                  "fontSize": 13,
                                   "fontWeight": "normal"
                                 }
                               ]
@@ -6177,7 +6177,7 @@
                           "fill": "#D4D4D4",
                           "content": " ",
                           "fontFamily": "Fira Code",
-                          "fontSize": 11,
+                          "fontSize": 13,
                           "fontWeight": "normal"
                         },
                         {
@@ -6250,7 +6250,7 @@
                                   "fill": "#6A9955",
                                   "content": "  // 메뉴 이름만 추출",
                                   "fontFamily": "Fira Code",
-                                  "fontSize": 11,
+                                  "fontSize": 13,
                                   "fontWeight": "normal"
                                 },
                                 {
@@ -6260,7 +6260,7 @@
                                   "fill": "#9CDCFE",
                                   "content": "  let orderedMenuNames = [];",
                                   "fontFamily": "Fira Code",
-                                  "fontSize": 11,
+                                  "fontSize": 13,
                                   "fontWeight": "normal"
                                 },
                                 {
@@ -6270,7 +6270,7 @@
                                   "fill": "#D4D4D4",
                                   "content": "  for (let i = 0; i < orderedItems.length; i++) {",
                                   "fontFamily": "Fira Code",
-                                  "fontSize": 11,
+                                  "fontSize": 13,
                                   "fontWeight": "normal"
                                 },
                                 {
@@ -6280,7 +6280,7 @@
                                   "fill": "#D4D4D4",
                                   "content": "    orderedMenuNames.push(orderedItems[i].name);",
                                   "fontFamily": "Fira Code",
-                                  "fontSize": 11,
+                                  "fontSize": 13,
                                   "fontWeight": "normal"
                                 },
                                 {
@@ -6290,7 +6290,7 @@
                                   "fill": "#D4D4D4",
                                   "content": "  }",
                                   "fontFamily": "Fira Code",
-                                  "fontSize": 11,
+                                  "fontSize": 13,
                                   "fontWeight": "normal"
                                 },
                                 {
@@ -6300,7 +6300,7 @@
                                   "fill": "#6A9955",
                                   "content": "  // 최종 결과 출력",
                                   "fontFamily": "Fira Code",
-                                  "fontSize": 11,
+                                  "fontSize": 13,
                                   "fontWeight": "normal"
                                 },
                                 {
@@ -6310,7 +6310,7 @@
                                   "fill": "#D4D4D4",
                                   "content": "  console.log(\"주문 내역:\", orderedMenuNames.join(\", \"));",
                                   "fontFamily": "Fira Code",
-                                  "fontSize": 11,
+                                  "fontSize": 13,
                                   "fontWeight": "normal"
                                 },
                                 {
@@ -6320,7 +6320,7 @@
                                   "fill": "#D4D4D4",
                                   "content": "  console.log(\"결제 금액:\", totalPrice, \"원\");",
                                   "fontFamily": "Fira Code",
-                                  "fontSize": 11,
+                                  "fontSize": 13,
                                   "fontWeight": "normal"
                                 },
                                 {
@@ -6330,7 +6330,7 @@
                                   "fill": "#D4D4D4",
                                   "content": "  console.log(\"총 칼로리:\", totalKcal, \"kcal\");",
                                   "fontFamily": "Fira Code",
-                                  "fontSize": 11,
+                                  "fontSize": 13,
                                   "fontWeight": "normal"
                                 },
                                 {
@@ -6340,7 +6340,7 @@
                                   "fill": "#D4D4D4",
                                   "content": "  console.log(\"거스름돈:\", change, \"원\");",
                                   "fontFamily": "Fira Code",
-                                  "fontSize": 11,
+                                  "fontSize": 13,
                                   "fontWeight": "normal"
                                 },
                                 {
@@ -6350,7 +6350,7 @@
                                   "fill": "#D4D4D4",
                                   "content": "  console.log(\"적립 포인트:\", point, \"점\");",
                                   "fontFamily": "Fira Code",
-                                  "fontSize": 11,
+                                  "fontSize": 13,
                                   "fontWeight": "normal"
                                 },
                                 {
@@ -6360,7 +6360,7 @@
                                   "fill": "#D4D4D4",
                                   "content": "}",
                                   "fontFamily": "Fira Code",
-                                  "fontSize": 11,
+                                  "fontSize": 13,
                                   "fontWeight": "normal"
                                 }
                               ]
@@ -6374,7 +6374,7 @@
                           "fill": "#D4D4D4",
                           "content": " ",
                           "fontFamily": "Fira Code",
-                          "fontSize": 11,
+                          "fontSize": 13,
                           "fontWeight": "normal"
                         },
                         {
@@ -6384,7 +6384,7 @@
                           "fill": "#6A9955",
                           "content": "// 실행 예시",
                           "fontFamily": "Fira Code",
-                          "fontSize": 11,
+                          "fontSize": 13,
                           "fontWeight": "normal"
                         },
                         {
@@ -6394,7 +6394,7 @@
                           "fill": "#D4D4D4",
                           "content": "processOrder(menuList, [\"볶음밥\", \"군만두\", \"냉우동\"], 30000);",
                           "fontFamily": "Fira Code",
-                          "fontSize": 11,
+                          "fontSize": 13,
                           "fontWeight": "normal"
                         }
                       ]
@@ -6415,7 +6415,7 @@
               "type": "frame",
               "id": "Ibdxr",
               "name": "Drop Zone Panel",
-              "width": "fill_container",
+              "width": 565,
               "height": "fill_container",
               "fill": "#0D1117",
               "layout": "vertical",
@@ -8887,7 +8887,7 @@
                   "id": "embNz",
                   "name": "stepText",
                   "fill": "#FFFFFF",
-                  "content": "STEP 5",
+                  "content": "STEP 3",
                   "fontFamily": "Inter",
                   "fontSize": 11,
                   "fontWeight": "700",
@@ -8900,7 +8900,7 @@
               "id": "07Ojz",
               "name": "Header Title",
               "fill": "#E6EDF3",
-              "content": "계층 나누기",
+              "content": "액션에서 계산 추출하기",
               "fontFamily": "Inter",
               "fontSize": 18,
               "fontWeight": "600"
@@ -8918,7 +8918,7 @@
               "type": "frame",
               "id": "gdUjb",
               "name": "Quiz Panel",
-              "width": "fill_container",
+              "width": 397,
               "height": "fill_container",
               "fill": "#0D1117",
               "layout": "vertical",
@@ -9071,7 +9071,7 @@
                           "fill": "#E6EDF3",
                           "content": "getOrderedItems.js",
                           "fontFamily": "Inter",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -9092,7 +9092,7 @@
                       "name": "hint",
                       "fill": "#8B949E",
                       "fontFamily": "Inter",
-                      "fontSize": 11,
+                      "fontSize": 13,
                       "fontWeight": "normal",
                       "fontStyle": "italic"
                     },
@@ -9126,7 +9126,7 @@
                           "fill": "#FFFFFF",
                           "content": "코드 실행하기",
                           "fontFamily": "Inter",
-                          "fontSize": 11,
+                          "fontSize": 13,
                           "fontWeight": "600"
                         }
                       ]
@@ -9165,7 +9165,7 @@
                           "content": "1",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -9178,7 +9178,7 @@
                           "content": "2",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -9191,7 +9191,7 @@
                           "content": "3",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -9204,7 +9204,7 @@
                           "content": "4",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -9217,7 +9217,7 @@
                           "content": "5",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -9230,7 +9230,7 @@
                           "content": "6",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -9243,7 +9243,7 @@
                           "content": "7",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -9256,7 +9256,7 @@
                           "content": "8",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -9269,7 +9269,7 @@
                           "content": "9",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -9282,7 +9282,7 @@
                           "content": "10",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -9295,7 +9295,7 @@
                           "content": "11",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -9308,7 +9308,7 @@
                           "content": "12",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -9321,7 +9321,7 @@
                           "content": "13",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -9334,7 +9334,7 @@
                           "content": "14",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -9347,7 +9347,7 @@
                           "content": "15",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -9360,7 +9360,7 @@
                           "content": "16",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -9373,7 +9373,7 @@
                           "content": "17",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -9386,7 +9386,7 @@
                           "content": "18",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -9399,7 +9399,7 @@
                           "content": "19",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -9412,7 +9412,7 @@
                           "content": "20",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -9425,7 +9425,7 @@
                           "content": "21",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -9438,7 +9438,7 @@
                           "content": "22",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -9451,7 +9451,7 @@
                           "content": "23",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -9464,7 +9464,7 @@
                           "content": "24",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -9477,7 +9477,7 @@
                           "content": "25",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         },
                         {
@@ -9490,7 +9490,7 @@
                           "content": "26",
                           "textAlign": "right",
                           "fontFamily": "Fira Code",
-                          "fontSize": 12,
+                          "fontSize": 14,
                           "fontWeight": "normal"
                         }
                       ]
@@ -9517,7 +9517,7 @@
                           "fill": "#E6EDF3",
                           "content": "function getOrderedItems(menuList, orderedNames, money) {",
                           "fontFamily": "Fira Code",
-                          "fontSize": 11,
+                          "fontSize": 13,
                           "fontWeight": "normal"
                         },
                         {
@@ -9527,7 +9527,7 @@
                           "fill": "#6A9955",
                           "content": "  // 주문한 메뉴만 필터링",
                           "fontFamily": "Fira Code",
-                          "fontSize": 11,
+                          "fontSize": 13,
                           "fontWeight": "normal"
                         },
                         {
@@ -9537,7 +9537,7 @@
                           "fill": "#E6EDF3",
                           "content": "  const orderedItems = menuList.filter(",
                           "fontFamily": "Fira Code",
-                          "fontSize": 11,
+                          "fontSize": 13,
                           "fontWeight": "normal"
                         },
                         {
@@ -9547,7 +9547,7 @@
                           "fill": "#E6EDF3",
                           "content": "    menu => orderedNames.includes(menu.name)",
                           "fontFamily": "Fira Code",
-                          "fontSize": 11,
+                          "fontSize": 13,
                           "fontWeight": "normal"
                         },
                         {
@@ -9557,7 +9557,7 @@
                           "fill": "#E6EDF3",
                           "content": "  );",
                           "fontFamily": "Fira Code",
-                          "fontSize": 11,
+                          "fontSize": 13,
                           "fontWeight": "normal"
                         },
                         {
@@ -9567,7 +9567,7 @@
                           "fill": "#E6EDF3",
                           "content": " ",
                           "fontFamily": "Fira Code",
-                          "fontSize": 11,
+                          "fontSize": 13,
                           "fontWeight": "normal"
                         },
                         {
@@ -9577,7 +9577,7 @@
                           "fill": "#6A9955",
                           "content": "  // 총 금액 계산",
                           "fontFamily": "Fira Code",
-                          "fontSize": 11,
+                          "fontSize": 13,
                           "fontWeight": "normal"
                         },
                         {
@@ -9587,7 +9587,7 @@
                           "fill": "#E6EDF3",
                           "content": "  const totalPrice = orderedItems.reduce(",
                           "fontFamily": "Fira Code",
-                          "fontSize": 11,
+                          "fontSize": 13,
                           "fontWeight": "normal"
                         },
                         {
@@ -9597,7 +9597,7 @@
                           "fill": "#E6EDF3",
                           "content": "    (sum, item) => sum + item.price, 0",
                           "fontFamily": "Fira Code",
-                          "fontSize": 11,
+                          "fontSize": 13,
                           "fontWeight": "normal"
                         },
                         {
@@ -9607,7 +9607,7 @@
                           "fill": "#E6EDF3",
                           "content": "  );",
                           "fontFamily": "Fira Code",
-                          "fontSize": 11,
+                          "fontSize": 13,
                           "fontWeight": "normal"
                         },
                         {
@@ -9617,7 +9617,7 @@
                           "fill": "#E6EDF3",
                           "content": " ",
                           "fontFamily": "Fira Code",
-                          "fontSize": 11,
+                          "fontSize": 13,
                           "fontWeight": "normal"
                         },
                         {
@@ -9627,7 +9627,7 @@
                           "fill": "#6A9955",
                           "content": "  // 총 칼로리 계산",
                           "fontFamily": "Fira Code",
-                          "fontSize": 11,
+                          "fontSize": 13,
                           "fontWeight": "normal"
                         },
                         {
@@ -9637,7 +9637,7 @@
                           "fill": "#E6EDF3",
                           "content": "  const totalCalories = orderedItems.reduce(",
                           "fontFamily": "Fira Code",
-                          "fontSize": 11,
+                          "fontSize": 13,
                           "fontWeight": "normal"
                         },
                         {
@@ -9647,7 +9647,7 @@
                           "fill": "#E6EDF3",
                           "content": "    (sum, item) => sum + item.calories, 0",
                           "fontFamily": "Fira Code",
-                          "fontSize": 11,
+                          "fontSize": 13,
                           "fontWeight": "normal"
                         },
                         {
@@ -9657,7 +9657,7 @@
                           "fill": "#E6EDF3",
                           "content": "  );",
                           "fontFamily": "Fira Code",
-                          "fontSize": 11,
+                          "fontSize": 13,
                           "fontWeight": "normal"
                         },
                         {
@@ -9667,7 +9667,7 @@
                           "fill": "#E6EDF3",
                           "content": " ",
                           "fontFamily": "Fira Code",
-                          "fontSize": 11,
+                          "fontSize": 13,
                           "fontWeight": "normal"
                         },
                         {
@@ -9677,7 +9677,7 @@
                           "fill": "#6A9955",
                           "content": "  // 메뉴 이름 추출 및 출력",
                           "fontFamily": "Fira Code",
-                          "fontSize": 11,
+                          "fontSize": 13,
                           "fontWeight": "normal"
                         },
                         {
@@ -9687,7 +9687,7 @@
                           "fill": "#E6EDF3",
                           "content": "  const names = orderedItems.map(item => item.name);",
                           "fontFamily": "Fira Code",
-                          "fontSize": 11,
+                          "fontSize": 13,
                           "fontWeight": "normal"
                         },
                         {
@@ -9697,7 +9697,7 @@
                           "fill": "#E6EDF3",
                           "content": "  console.log(`주문 메뉴: ${names.join(', ')}`);",
                           "fontFamily": "Fira Code",
-                          "fontSize": 11,
+                          "fontSize": 13,
                           "fontWeight": "normal"
                         },
                         {
@@ -9707,7 +9707,7 @@
                           "fill": "#E6EDF3",
                           "content": "  console.log(`총 금액: ${totalPrice}원`);",
                           "fontFamily": "Fira Code",
-                          "fontSize": 11,
+                          "fontSize": 13,
                           "fontWeight": "normal"
                         },
                         {
@@ -9717,7 +9717,7 @@
                           "fill": "#E6EDF3",
                           "content": "  console.log(`총 칼로리: ${totalCalories}kcal`);",
                           "fontFamily": "Fira Code",
-                          "fontSize": 11,
+                          "fontSize": 13,
                           "fontWeight": "normal"
                         },
                         {
@@ -9727,7 +9727,7 @@
                           "fill": "#E6EDF3",
                           "content": " ",
                           "fontFamily": "Fira Code",
-                          "fontSize": 11,
+                          "fontSize": 13,
                           "fontWeight": "normal"
                         },
                         {
@@ -9737,7 +9737,7 @@
                           "fill": "#6A9955",
                           "content": "  // 거스름돈 계산",
                           "fontFamily": "Fira Code",
-                          "fontSize": 11,
+                          "fontSize": 13,
                           "fontWeight": "normal"
                         },
                         {
@@ -9747,7 +9747,7 @@
                           "fill": "#E6EDF3",
                           "content": "  const change = money - totalPrice;",
                           "fontFamily": "Fira Code",
-                          "fontSize": 11,
+                          "fontSize": 13,
                           "fontWeight": "normal"
                         },
                         {
@@ -9757,7 +9757,7 @@
                           "fill": "#E6EDF3",
                           "content": "  console.log(`거스름돈: ${change}원`);",
                           "fontFamily": "Fira Code",
-                          "fontSize": 11,
+                          "fontSize": 13,
                           "fontWeight": "normal"
                         },
                         {
@@ -9767,7 +9767,7 @@
                           "fill": "#E6EDF3",
                           "content": "}",
                           "fontFamily": "Fira Code",
-                          "fontSize": 11,
+                          "fontSize": 13,
                           "fontWeight": "normal"
                         }
                       ]
@@ -9788,7 +9788,7 @@
               "type": "frame",
               "id": "ofgGI",
               "name": "Drop Zone Panel",
-              "width": "fill_container",
+              "width": 488,
               "fill": "#0D1117",
               "layout": "vertical",
               "gap": 16,

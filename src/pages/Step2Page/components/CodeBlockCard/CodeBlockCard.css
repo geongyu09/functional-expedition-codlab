@@ -1,0 +1,31 @@
+.code-block-card {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 12px 16px;
+  cursor: grab;
+  transition: border-color 0.15s, opacity 0.15s;
+  user-select: none;
+}
+
+.code-block-card:hover {
+  border-color: #58a6ff;
+}
+
+.code-block-card:active {
+  cursor: grabbing;
+}
+
+.code-block-card--dragging {
+  opacity: 0.5;
+}
+
+.code-block-card__pre {
+  margin: 0;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  font-size: 13px;
+  line-height: 1.5;
+  background: transparent;
+  overflow-x: auto;
+  white-space: pre;
+}
