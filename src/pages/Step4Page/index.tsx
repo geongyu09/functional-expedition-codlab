@@ -6,6 +6,8 @@ import useStep4 from "./hooks/useStep4";
 import {
   CALCULATE_TOTAL_PRICE_CODE,
   CALCULATE_TOTAL_KCAL_CODE,
+  CALCULATE_TOTAL_PRICE_REFACTORED_CODE,
+  CALCULATE_TOTAL_KCAL_REFACTORED_CODE,
   PROCESS_ORDER_CODE,
   DOMAIN_FUNCTIONS_CODE,
   UTIL_FUNCTIONS_CODE,
@@ -239,11 +241,11 @@ function Step4Page() {
           <div className="step4-page__readonly-blocks">
             <div className="step4-page__readonly-block">
               <p className="step4-page__readonly-label">참고 (읽기 전용)</p>
-              <CodeSnippet code={CALCULATE_TOTAL_PRICE_CODE} />
+              <CodeSnippet code={q2Unlocked ? CALCULATE_TOTAL_PRICE_REFACTORED_CODE : CALCULATE_TOTAL_PRICE_CODE} />
             </div>
             <div className="step4-page__readonly-block">
               <p className="step4-page__readonly-label">참고 (읽기 전용)</p>
-              <CodeSnippet code={CALCULATE_TOTAL_KCAL_CODE} />
+              <CodeSnippet code={q2Unlocked ? CALCULATE_TOTAL_KCAL_REFACTORED_CODE : CALCULATE_TOTAL_KCAL_CODE} />
             </div>
           </div>
 
@@ -315,7 +317,7 @@ function Step4Page() {
               <div className="step4-page__hierarchy-layer-examples">
                 <CodeSnippet
                   code={DOMAIN_FUNCTIONS_CODE}
-                  highlightLines={[6, 7, 8, 9, 10, 11, 12, 14, 15, 16, 17, 18, 19, 20]}
+                  highlightLines={[7, 8, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19, 20, 21, 22, 23]}
                 />
               </div>
             </div>

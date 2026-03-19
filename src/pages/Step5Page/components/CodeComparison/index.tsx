@@ -1,17 +1,23 @@
 import CodePanel from '../../../../components/CodePanel'
-import { BEFORE_CODE, AFTER_CODE } from '../../data'
 import './CodeComparison.css'
 
-function CodeComparison() {
+interface Props {
+  beforeCode: string
+  afterCode: string
+  beforeTitle?: string
+  afterTitle?: string
+}
+
+function CodeComparison({ beforeCode, afterCode, beforeTitle = 'Before: 리팩터링 전', afterTitle = 'After: 리팩터링 후' }: Props) {
   return (
     <div className="code-comparison">
       <div className="code-comparison__panel">
-        <h3 className="code-comparison__title">Before: 리팩터링 전</h3>
-        <CodePanel filename="processOrder.js" code={BEFORE_CODE} />
+        <h3 className="code-comparison__title">{beforeTitle}</h3>
+        <CodePanel filename="processOrder.js" code={beforeCode} />
       </div>
       <div className="code-comparison__panel">
-        <h3 className="code-comparison__title">After: 리팩터링 후</h3>
-        <CodePanel filename="processOrder.js" code={AFTER_CODE} />
+        <h3 className="code-comparison__title">{afterTitle}</h3>
+        <CodePanel filename="processOrder.js" code={afterCode} />
       </div>
     </div>
   )

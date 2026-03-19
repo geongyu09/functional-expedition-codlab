@@ -1,4 +1,4 @@
-import type { Link, Node } from './types'
+import type { Link, Node } from "./types";
 
 export const CALL_TREE_NODES: Node[] = [
   // Layer 0: 비즈니스 로직
@@ -7,7 +7,12 @@ export const CALL_TREE_NODES: Node[] = [
   // Layer 1: 주요 기능 함수
   { id: "filterMenuList", name: "filterMenuList()", layer: 1, x: -525 },
   { id: "getOrderedItems", name: "getOrderedItems()", layer: 1, x: -375 },
-  { id: "calculateTotalPrice", name: "calculateTotalPrice()", layer: 1, x: -225 },
+  {
+    id: "calculateTotalPrice",
+    name: "calculateTotalPrice()",
+    layer: 1,
+    x: -225,
+  },
   { id: "calculateTotalKcal", name: "calculateTotalKcal()", layer: 1, x: -75 },
   { id: "calculatePoint", name: "calculatePoint()", layer: 1, x: 75 },
   { id: "calculateChange", name: "calculateChange()", layer: 1, x: 225 },
@@ -28,8 +33,8 @@ export const CALL_TREE_NODES: Node[] = [
   { id: "op_sub", name: "-", layer: 3, x: 75 },
   { id: "push", name: "push", layer: 3, x: 225 },
   { id: "join", name: "join", layer: 3, x: 375 },
-  { id: "console", name: "console", layer: 3, x: 525 }
-]
+  { id: "console", name: "console", layer: 3, x: 525 },
+];
 
 export const CALL_TREE_LINKS: Link[] = [
   // Layer 0 -> Layer 1
@@ -59,15 +64,55 @@ export const CALL_TREE_LINKS: Link[] = [
   { source: "subtract", target: "op_sub" },
   { source: "filterElementByKey", target: "for" },
   { source: "filterElementByKey", target: "length" },
-  { source: "filterElementByKey", target: "push" }
-]
+  { source: "filterElementByKey", target: "push" },
+];
 
 export const LAYERS = [
   "비즈니스 로직",
   "주요 기능 함수",
   "유틸 함수",
-  "기본 JS 기능"
-]
+  "기본 JS 기능",
+];
+
+export const BEFORE_CODE_ORDERED = `const menuList = [
+  { name: "삼선짬뽕", price: 12000, kcal: 800 },
+  { name: "볶음밥",   price: 6000,  kcal: 700 },
+  { name: "탕수육",   price: 18000, kcal: 980 },
+  { name: "군만두",   price: 5000,  kcal: 420 },
+  { name: "냉우동",   price: 8500,  kcal: 580 },
+  { name: "짜장면",   price: 7000,  kcal: 620 },
+];
+
+function getOrderedItems(targetMenus) {
+  const orderedItems = menuList.filter((menu) =>
+    targetMenus.includes(menu.name));
+
+  return orderedItems;
+}
+
+// 실행 예시
+const result = getOrderedItems(["볶음밥", "군만두", "냉우동"]);
+console.log(result); // 어딘가에서 menuList를 변경하면 결과가 달라질 수 있음!`;
+
+export const AFTER_CODE_ORDERED = `const menuList = [
+  { name: "삼선짬뽕", price: 12000, kcal: 800 },
+  { name: "볶음밥",   price: 6000,  kcal: 700 },
+  { name: "탕수육",   price: 18000, kcal: 980 },
+  { name: "군만두",   price: 5000,  kcal: 420 },
+  { name: "냉우동",   price: 8500,  kcal: 580 },
+  { name: "짜장면",   price: 7000,  kcal: 620 },
+];
+
+function getOrderedItems(menuList, targetMenus) {
+  const orderedItems = menuList.filter((menu) =>
+    targetMenus.includes(menu.name));
+
+  return orderedItems;
+}
+
+// 실행 예시
+const result = getOrderedItems(menuList, ["볶음밥", "군만두", "냉우동"]);
+console.log(result); // menuList를 명시적으로 전달하기 때문에, 동일한 호출에 대해 항상 동일한 결과를 보장함!`;
 
 export const BEFORE_CODE = `function processOrder(menuList, orderedMenus, money) {
   // 구매 가능한 메뉴 필터링
@@ -108,7 +153,7 @@ export const BEFORE_CODE = `function processOrder(menuList, orderedMenus, money)
 }
 
 // 실행 예시
-processOrder(menuList, ["볶음밥", "군만두", "냉우동"], 30000);`
+processOrder(menuList, ["볶음밥", "군만두", "냉우동"], 30000);`;
 
 export const AFTER_CODE = `function processOrder(menuList, orderedMenus, money) {
   // 구매 가능한 메뉴 필터링
@@ -135,4 +180,66 @@ export const AFTER_CODE = `function processOrder(menuList, orderedMenus, money) 
 }
 
 // 실행 예시
-processOrder(menuList, ["볶음밥", "군만두", "냉우동"], 30000);`
+processOrder(menuList, ["볶음밥", "군만두", "냉우동"], 30000);`;
+
+export const BEFORE_CODE_2 = `// 주문 항목의 총 가격을 계산한다
+function calculateTotalPrice(orderedItems) {
+  let totalPrice = 0;
+  for (let i = 0; i < orderedItems.length; i++) {
+    totalPrice += orderedItems[i].price;
+  }
+  return totalPrice;
+}
+
+// 주문 항목의 총 칼로리를 계산한다
+function calculateTotalKcal(orderedItems) {
+  let totalKcal = 0;
+  for (let i = 0; i < orderedItems.length; i++) {
+    totalKcal += orderedItems[i].kcal;
+  }
+  return totalKcal;
+}
+
+// 총 가격을 기반으로 적립 포인트를 계산한다
+function calculatePoint(totalPrice) {
+  return totalPrice * 0.1;
+}
+
+// 지불 금액에서 총 가격을 뺀 거스름돈을 계산한다
+function calculateChange(money, totalPrice) {
+  return money - totalPrice;
+}
+
+// 주문 항목 목록에서 메뉴 이름만 추출한다
+function getMenuNames(items) {
+  let names = [];
+  for (let i = 0; i < items.length; i++) {
+    names.push(items[i].name);
+  }
+  return names;
+}`;
+
+export const AFTER_CODE_2 = `// 주문 항목의 총 가격을 계산한다
+function calculateTotalPrice(orderedItems) {
+  return sum(orderedItems, 'price');
+}
+
+// 주문 항목의 총 칼로리를 계산한다
+function calculateTotalKcal(orderedItems) {
+  return sum(orderedItems, 'kcal');
+}
+
+// 총 가격을 기반으로 적립 포인트를 계산한다
+function calculatePoint(totalPrice) {
+  return multiply(totalPrice, 0.1);
+}
+
+// 지불 금액에서 총 가격을 뺀 거스름돈을 계산한다
+function calculateChange(money, totalPrice) {
+  return subtract(money, totalPrice);
+}
+
+// 주문 항목 목록에서 메뉴 이름만 추출한다
+function getMenuNames(items) {
+  return filterElementByKey(items, "name");
+}`;

@@ -6,6 +6,78 @@
   flex-direction: column;
 }
 
+.step5-page__intro {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: radial-gradient(ellipse at 50% 60%, #161b22 0%, #0d1117 70%);
+  border-bottom: 1px solid #21262d;
+  position: relative;
+}
+
+.step5-page__intro-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 0 24px;
+}
+
+.step5-page__intro-label {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #58a6ff;
+  margin: 0;
+}
+
+.step5-page__intro-title {
+  font-size: clamp(36px, 6vw, 64px);
+  font-weight: 800;
+  color: #f0f6fc;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.step5-page__intro-desc {
+  font-size: 18px;
+  color: #8b949e;
+  line-height: 1.6;
+  margin: 8px 0 0 0;
+  max-width: 480px;
+}
+
+.step5-page__scroll-hint {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin-top: 32px;
+  color: #6e7681;
+  font-size: 13px;
+  animation: step5-bounce 2s ease-in-out infinite;
+}
+
+.step5-page__scroll-arrow {
+  width: 20px;
+  height: 20px;
+}
+
+@keyframes step5-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(6px);
+    opacity: 1;
+  }
+}
+
 .step5-page__content {
   flex: 1;
   max-width: 1400px;
@@ -14,7 +86,7 @@
   padding: 40px 24px;
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 280px;
 }
 
 .step5-page__section {
