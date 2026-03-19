@@ -3,8 +3,9 @@ import { useNavigate } from "react-router-dom";
 import { Highlight, themes } from "prism-react-renderer";
 import Editor from "react-simple-code-editor";
 import StepHeader from "../Step1Page/components/StepHeader";
+import HintToggle from "../../components/HintToggle";
 import useStep3 from "./hooks/useStep3";
-import { FULL_CODE_LINES, TEST_CODE } from "./data";
+import { FULL_CODE_LINES, TEST_CODE, Q1_HINTS, Q2_HINTS } from "./data";
 import "./Step3Page.css";
 
 const fullCodeString = FULL_CODE_LINES.map((line) => line.content).join("\n");
@@ -36,11 +37,9 @@ function Step3Page() {
     q2Unlocked,
     code,
     testResult,
-    hintOpen,
     handleQ1Select,
     handleCodeChange,
     handleRunTest,
-    handleHintToggle,
   } = useStep3();
 
   const q1ButtonClass = (choice: "action" | "calculation"): string => {
@@ -79,6 +78,9 @@ function Step3Page() {
                 🧮 계산
               </button>
             </div>
+            
+            <HintToggle hints={Q1_HINTS} />
+
             {q1State === "correct" && (
               <p className="step3-page__feedback step3-page__feedback--correct">
                 정답입니다! 전역 변수를 매개변수로 받아 계산으로 만들어봐요.
@@ -101,19 +103,7 @@ function Step3Page() {
                   이 함수를 계산으로 만들어보세요! 코드 에디터 탭에서 코드를
                   수정할 수 있어요.
                 </p>
-                <button
-                  className="step3-page__hint-toggle"
-                  onClick={handleHintToggle}
-                >
-                  {hintOpen ? "▲ 힌트 닫기" : "▼ 힌트 보기"}
-                </button>
-                {hintOpen && (
-                  <p className="step3-page__hint-content">
-                    핵심은 암묵적 입력에 있어요! <br />
-                    <code>암묵적 입력</code>
-                    이란 함수 내부에서 직접 참조하는 외부 상태를 의미해요.
-                  </p>
-                )}
+                <HintToggle hints={Q2_HINTS} />
               </div>
             </>
           )}

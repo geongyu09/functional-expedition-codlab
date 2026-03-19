@@ -1,9 +1,17 @@
-import { useState } from 'react'
-import { ChevronDownIcon } from '../../../../components/Icons'
-import { HINTS } from '../../data'
+import { useState, ReactNode } from 'react'
+import { ChevronDownIcon } from '../Icons'
 import './HintToggle.css'
 
-function HintToggle() {
+export interface HintItem {
+  emoji: string
+  text: ReactNode
+}
+
+interface HintToggleProps {
+  hints: HintItem[]
+}
+
+function HintToggle({ hints }: HintToggleProps) {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
@@ -16,7 +24,7 @@ function HintToggle() {
       </button>
       {isOpen && (
         <div className="hint-toggle__content">
-          {HINTS.map((hint, index) => (
+          {hints.map((hint, index) => (
             <div key={index} className="hint-toggle__item">
               <span className="hint-toggle__item-emoji">{hint.emoji}</span>
               <span className="hint-toggle__item-text">{hint.text}</span>

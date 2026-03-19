@@ -63,11 +63,9 @@ interface UseStep3Return {
   q2Unlocked: boolean;
   code: string;
   testResult: TestResult | null;
-  hintOpen: boolean;
   handleQ1Select: (choice: Q1Choice) => void;
   handleCodeChange: (code: string) => void;
   handleRunTest: () => void;
-  handleHintToggle: () => void;
 }
 
 function useStep3(): UseStep3Return {
@@ -76,7 +74,6 @@ function useStep3(): UseStep3Return {
   const [q2Unlocked, setQ2Unlocked] = useState(false);
   const [code, setCode] = useState(INITIAL_CODE);
   const [testResult, setTestResult] = useState<TestResult | null>(null);
-  const [hintOpen, setHintOpen] = useState(false);
 
   const handleQ1Select = (choice: Q1Choice): void => {
     if (q1State === "correct") return;
@@ -101,21 +98,15 @@ function useStep3(): UseStep3Return {
     setTestResult(result);
   };
 
-  const handleHintToggle = (): void => {
-    setHintOpen((prev) => !prev);
-  };
-
   return {
     q1Selected,
     q1State,
     q2Unlocked,
     code,
     testResult,
-    hintOpen,
     handleQ1Select,
     handleCodeChange,
     handleRunTest,
-    handleHintToggle,
   };
 }
 

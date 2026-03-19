@@ -122,47 +122,6 @@
   gap: 16px;
 }
 
-.step3-page__hint-toggle {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background: none;
-  border: 1px solid #30363d;
-  border-radius: 6px;
-  padding: 8px 14px;
-  color: #8b949e;
-  font-size: 13px;
-  font-weight: 500;
-  cursor: pointer;
-  width: fit-content;
-  transition: border-color 0.15s, color 0.15s;
-}
-
-.step3-page__hint-toggle:hover {
-  border-color: #58a6ff;
-  color: #58a6ff;
-}
-
-.step3-page__hint-content {
-  padding: 14px 16px;
-  background-color: #161b22;
-  border: 1px solid #30363d;
-  border-radius: 6px;
-  color: #8b949e;
-  font-size: 14px;
-  line-height: 1.6;
-  margin: 0;
-}
-
-.step3-page__hint-content code {
-  background-color: #30363d;
-  border-radius: 3px;
-  padding: 1px 5px;
-  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
-  font-size: 13px;
-  color: #e6edf3;
-}
-
 /* ── Code Panel ─────────────────────────────────── */
 
 .step3-page__code-panel {

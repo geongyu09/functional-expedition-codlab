@@ -1,15 +1,11 @@
+import { useNavigate } from 'react-router-dom'
 import StepHeader from './components/StepHeader'
-import QuizOption from './components/QuizOption'
-import HintToggle from './components/HintToggle'
-import AnswerExplanation from './components/AnswerExplanation'
 import CodePanel from '../../components/CodePanel'
-import useQuiz from './hooks/useQuiz'
-import { QUIZ_QUESTION, QUIZ_OPTIONS, CORRECT_OPTION_ID, CODE_FILENAME, CODE_SOURCE, CODE_HIGHLIGHTS } from './data'
+import { QUIZ_QUESTION, CODE_FILENAME, CODE_SOURCE, CODE_HIGHLIGHTS } from './data'
 import './Step1Page.css'
 
 function Step1Page() {
-  const { selectedId, quizState, handleSelect, handleNext } = useQuiz()
-  const correctOption = QUIZ_OPTIONS.find((o) => o.id === CORRECT_OPTION_ID)
+  const navigate = useNavigate()
 
   return (
     <main className="step1-page">
@@ -18,25 +14,12 @@ function Step1Page() {
         <div className="step1-page__quiz-panel">
           <p className="step1-page__question-number">Q1</p>
           <p className="step1-page__question-text">{QUIZ_QUESTION}</p>
-          <div className="step1-page__options">
-            {QUIZ_OPTIONS.map((option) => (
-              <QuizOption
-                key={option.id}
-                label={option.text}
-                selected={selectedId === option.id}
-                state={quizState}
-                disabled={quizState === 'correct'}
-                onSelect={() => handleSelect(option.id)}
-              />
-            ))}
-          </div>
-          <HintToggle />
-          {quizState === 'correct' && (
-            <AnswerExplanation
-              onNext={handleNext}
-              correctAnswer={correctOption?.text ?? ''}
-            />
-          )}
+          <button 
+            className="step1-page__next-btn" 
+            onClick={() => navigate('/step2')}
+          >
+            다음 문제로 이동 →
+          </button>
         </div>
         <div className="step1-page__divider" />
         <div className="step1-page__code-panel">

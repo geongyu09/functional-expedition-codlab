@@ -51,8 +51,20 @@
   margin: 0;
 }
 
-.step1-page__options {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+.step1-page__next-btn {
+  background-color: #238636;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background-color 0.15s;
+  margin-top: 24px;
+}
+
+.step1-page__next-btn:hover {
+  background-color: #2ea043;
 }

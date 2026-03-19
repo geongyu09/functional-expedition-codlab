@@ -57,6 +57,32 @@ const targetMenus = ["삼선짬뽕", "볶음밥"];
 //   { name: "볶음밥",   price: 6000,  kcal: 700 },
 // ]`;
 
+export const Q1_HINTS = [
+  {
+    emoji: "🔥",
+    text: "액션(Action)은 실행 시점이나 횟수에 의존하며, 외부 환경에 영향을 주거나 받는 부수 효과(Side Effect)를 포함합니다.",
+  },
+  {
+    emoji: "🧮",
+    text: "계산(Calculation)은 입력값에 대해서만 결과가 결정되며, 실행 시점이나 횟수에 관계없이 항상 같은 값을 반환합니다.",
+  },
+  {
+    emoji: "🔍",
+    text: "getOrderedItems 함수가 외부 변수인 menuList를 직접 참조하고 있는지 확인해 보세요.",
+  },
+];
+
+export const Q2_HINTS = [
+  {
+    emoji: "💡",
+    text: "핵심은 암묵적 입력에 있어요! 암묵적 입력이란 함수 내부에서 직접 참조하는 외부 상태를 의미해요.",
+  },
+  {
+    emoji: "🛠️",
+    text: "함수의 매개변수를 하나 더 추가해서 menuList를 주입받도록 수정해 보세요.",
+  },
+];
+
 export const FULL_CODE_LINES: FullCodeLine[] = [
   { lineNumber: 1, content: "const menuList = [", type: "normal" },
   {

@@ -1,61 +1,7 @@
-import type { QuizOption, HintItem, ExplanationItem } from "./types";
-import type { HighlightGroup } from "./components/CodePanel";
+import { HighlightGroup } from "../../components/CodePanel";
 
 export const QUIZ_QUESTION =
-  "processOrder 함수에는 크게 몇 개의 행동으로 나누어볼 수 있을까요?";
-
-export const QUIZ_OPTIONS: QuizOption[] = [
-  { id: "A", text: "2개" },
-  { id: "B", text: "3개" },
-  { id: "C", text: "4개" },
-  { id: "D", text: "5개" },
-];
-
-export const CORRECT_OPTION_ID = "D";
-
-export const HINTS: HintItem[] = [
-  {
-    emoji: "💡",
-    text: "코드를 자세히 읽어보고, '동작' 단위로 코드를 나누어 보세요.",
-  },
-  // {
-  //   emoji: "🔍",
-  //   text: "함수 인자로 받은 값을 읽거나 계산만 하는 코드는 액션이 아닙니다.",
-  // },
-  // {
-  //   emoji: "📌",
-  //   text: "외부 세계에 영향을 주거나 외부 세계로부터 영향을 받는 코드를 찾아보세요.",
-  // },
-];
-
-export const EXPLANATION_INTRO =
-  "processOrder 함수에는 총 5개의 동작이 포함되어 있습니다.";
-
-export const EXPLANATION_ITEMS: ExplanationItem[] = [
-  {
-    emoji: "1️⃣",
-    text: "구매 가능한 메뉴를 필터링한다\n→ 가지고 있는 금액(money) 기준으로 살 수 있는 메뉴 목록을 만듭니다.",
-  },
-  {
-    emoji: "2️⃣",
-    text: "주문한 메뉴 중 실제 주문 가능한 메뉴를 추출한다\n→ 필터링된 메뉴 기준으로 최종 주문 대상 메뉴들을 결정합니다.",
-  },
-  {
-    emoji: "3️⃣",
-    text: "총 결제 금액과 총 칼로리를 계산한다\n→ orderedItems를 순회하면서 price와 kcal을 각각 합산합니다.",
-  },
-  {
-    emoji: "4️⃣",
-    text: "거스름돈과 적립 포인트를 계산한다\n→ 거스름돈(money - totalPrice)과 포인트(totalPrice의 10%)를 계산합니다.",
-  },
-  {
-    emoji: "5️⃣",
-    text: "주문 결과를 가공하고 출력한다\n→ 메뉴 이름 리스트 생성 후, 주문 내역 / 금액 / 칼로리 / 거스름돈 / 포인트를 콘솔에 출력합니다.",
-  },
-];
-
-export const EXPLANATION_SUMMARY =
-  "console.log는 외부 환경에 영향을 주는 대표적인 액션입니다. 계산(calculation)은 순수하게 값을 반환하는 코드이며, 액션과 명확히 분리해야 합니다.";
+  "processOrder 함수를 함수형의 관점에서 한번 분리해볼까요?!";
 
 export const CODE_FILENAME = "order.js";
 
