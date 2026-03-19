@@ -59,6 +59,7 @@
   color: #c9d1d9;
   font-size: 13px;
   line-height: 1.6;
+  white-space: pre-line;
 }
 
 .answer-explanation__summary {

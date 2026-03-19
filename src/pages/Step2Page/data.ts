@@ -1,7 +1,7 @@
 import type { CodeBlock, CodeSegment, FunctionSignature } from "./types";
 
 export const QUIZ_QUESTION =
-  "processOrder 함수는 하는 역할에 따라 총 7개로 나누어 볼 수 있습니다.\n직접 processOrder 함수 내부의 코드를 마우스로 끌어서 함수를 작게 분리해보세요.";
+  "processOrder 함수의 역할에 따라 추상화를 해봅시다.\n 총 7개의 함수로 나누어 볼 수 있습니다.\n직접 processOrder 함수 내부의 코드를 마우스로 끌어서 함수를 작게 분리해보세요.";
 
 export const CODE_BLOCKS: CodeBlock[] = [
   {

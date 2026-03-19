@@ -10,6 +10,23 @@ interface FullCodeViewProps {
   onDragEnd: () => void
 }
 
+const InlineHighlight = ({ code }: { code: string }) => (
+  <Highlight theme={themes.vsDark} code={code} language="javascript">
+    {({ tokens, getTokenProps }) => (
+      <>
+        {tokens.map((line, i) => (
+          <span key={i}>
+            {line.map((token, key) => (
+              <span key={key} {...getTokenProps({ token })} />
+            ))}
+            {i < tokens.length - 1 ? '\n' : null}
+          </span>
+        ))}
+      </>
+    )}
+  </Highlight>
+)
+
 function FullCodeView({ matchedMap, draggedBlockId, isAllMatched, onDragStart, onDragEnd }: FullCodeViewProps) {
   if (isAllMatched) {
     return (
@@ -37,7 +54,7 @@ function FullCodeView({ matchedMap, draggedBlockId, isAllMatched, onDragStart, o
     if (segment.type === 'static') {
       return (
         <span key={segment.id} className="full-code-view__static">
-          {segment.code}
+          <InlineHighlight code={segment.code} />
         </span>
       )
     }
@@ -64,7 +81,7 @@ function FullCodeView({ matchedMap, draggedBlockId, isAllMatched, onDragStart, o
         onDragStart={isUsed ? undefined : (e) => onDragStart(block.id, e)}
         onDragEnd={isUsed ? undefined : onDragEnd}
       >
-        {block.code}
+        <InlineHighlight code={block.code} />
       </span>
     )
   }

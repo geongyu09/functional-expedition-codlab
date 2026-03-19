@@ -1,21 +1,13 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Highlight, themes } from "prism-react-renderer";
 import StepHeader from "../Step1Page/components/StepHeader";
 import useStep3 from "./hooks/useStep3";
 import { FULL_CODE_LINES, TEST_CODE } from "./data";
 import type { FullCodeLine } from "./types";
 import "./Step3Page.css";
 
-function FullCodeLine({ line }: { line: FullCodeLine }) {
-  return (
-    <div
-      className={`step3-page__code-line step3-page__code-line--${line.type}`}
-    >
-      <span className="step3-page__line-number">{line.lineNumber}</span>
-      <span className="step3-page__line-content">{line.content}</span>
-    </div>
-  );
-}
+const fullCodeString = FULL_CODE_LINES.map((line) => line.content).join("\n");
 
 type ActiveTab = "test" | "code";
 
@@ -52,8 +44,8 @@ function Step3Page() {
           <div className="step3-page__question-block">
             <p className="step3-page__question-number">Q1</p>
             <p className="step3-page__question-text">
-              다음 함수 <code>getOrderedItems</code>를{"\n"}
-              무엇으로 바꿔야 할까요?
+              다음 함수 <code>getOrderedItems</code>는 액션과 계산 중 무엇에 더
+              가까울까요?
             </p>
             <div className="step3-page__choices">
               <button
@@ -183,9 +175,35 @@ function Step3Page() {
             <p className="step3-page__panel-title">전체 코드 참고</p>
           </div>
           <div className="step3-page__full-code-lines">
-            {FULL_CODE_LINES.map((line) => (
-              <FullCodeLine key={line.lineNumber} line={line} />
-            ))}
+            <Highlight
+              theme={themes.vsDark}
+              code={fullCodeString}
+              language="javascript"
+            >
+              {({ tokens, getTokenProps }) => (
+                <>
+                  {tokens.map((tokenLine, i) => {
+                    const lineData = FULL_CODE_LINES[i];
+                    if (!lineData) return null;
+                    return (
+                      <div
+                        key={lineData.lineNumber}
+                        className={`step3-page__code-line step3-page__code-line--${lineData.type}`}
+                      >
+                        <span className="step3-page__line-number">
+                          {lineData.lineNumber}
+                        </span>
+                        <span className="step3-page__line-content">
+                          {tokenLine.map((token, key) => (
+                            <span key={key} {...getTokenProps({ token })} />
+                          ))}
+                        </span>
+                      </div>
+                    );
+                  })}
+                </>
+              )}
+            </Highlight>
           </div>
         </div>
       </div>

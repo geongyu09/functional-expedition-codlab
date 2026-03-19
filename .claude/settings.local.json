@@ -9,7 +9,8 @@
       "Bash(bun tsc:*)",
       "Bash(echo \"EXIT: $?\")",
       "Bash(echo \"VITE BUILD EXIT: $?\")",
-      "Bash(bun x:*)"
+      "Bash(bun x:*)",
+      "Bash(echo \"EXIT:$?\")"
     ]
   }
 }

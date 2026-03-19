@@ -1,13 +1,14 @@
 import type { QuizOption, HintItem, ExplanationItem } from "./types";
+import type { HighlightGroup } from "./components/CodePanel";
 
 export const QUIZ_QUESTION =
   "processOrder 함수에는 크게 몇 개의 행동으로 나누어볼 수 있을까요?";
 
 export const QUIZ_OPTIONS: QuizOption[] = [
-  { id: "A", text: "1개" },
-  { id: "B", text: "2개" },
-  { id: "C", text: "3개" },
-  { id: "D", text: "4개" },
+  { id: "A", text: "2개" },
+  { id: "B", text: "3개" },
+  { id: "C", text: "4개" },
+  { id: "D", text: "5개" },
 ];
 
 export const CORRECT_OPTION_ID = "D";
@@ -28,24 +29,28 @@ export const HINTS: HintItem[] = [
 ];
 
 export const EXPLANATION_INTRO =
-  "processOrder 함수에는 총 4개의 액션이 포함되어 있습니다.";
+  "processOrder 함수에는 총 5개의 동작이 포함되어 있습니다.";
 
 export const EXPLANATION_ITEMS: ExplanationItem[] = [
   {
     emoji: "1️⃣",
-    text: "filterMenuList(menuList, money) — 외부 함수 호출로 부수효과가 있을 수 있습니다.",
+    text: "구매 가능한 메뉴를 필터링한다\n→ 가지고 있는 금액(money) 기준으로 살 수 있는 메뉴 목록을 만듭니다.",
   },
   {
     emoji: "2️⃣",
-    text: 'console.log("주문 내역:", ...) — 외부 세계(콘솔)에 출력하는 액션입니다.',
+    text: "주문한 메뉴 중 실제 주문 가능한 메뉴를 추출한다\n→ 필터링된 메뉴 기준으로 최종 주문 대상 메뉴들을 결정합니다.",
   },
   {
     emoji: "3️⃣",
-    text: 'console.log("결제 금액:", ...) — 동일하게 외부 출력 액션입니다.',
+    text: "총 결제 금액과 총 칼로리를 계산한다\n→ orderedItems를 순회하면서 price와 kcal을 각각 합산합니다.",
   },
   {
     emoji: "4️⃣",
-    text: "console.log x 3 — 각 콘솔 출력은 독립된 액션으로 셉니다.",
+    text: "거스름돈과 적립 포인트를 계산한다\n→ 거스름돈(money - totalPrice)과 포인트(totalPrice의 10%)를 계산합니다.",
+  },
+  {
+    emoji: "5️⃣",
+    text: "주문 결과를 가공하고 출력한다\n→ 메뉴 이름 리스트 생성 후, 주문 내역 / 금액 / 칼로리 / 거스름돈 / 포인트를 콘솔에 출력합니다.",
   },
 ];
 
@@ -97,3 +102,11 @@ function processOrder(menuList, orderedMenus, money) {
 
 // 실행 예시
 processOrder(menuList, ["볶음밥", "군만두", "냉우동"], 30000);`;
+
+export const CODE_HIGHLIGHTS: HighlightGroup[] = [
+  { start: 5, end: 6, color: "rgba(255, 99, 132, 0.2)" }, // Group 1: 구매 가능한 메뉴 필터링
+  { start: 8, end: 9, color: "rgba(54, 162, 235, 0.2)" }, // Group 2: 주문 가능한 메뉴 추출
+  { start: 11, end: 22, color: "rgba(255, 206, 86, 0.2)" }, // Group 3: 총 결제 금액 & 칼로리 계산
+  { start: 24, end: 26, color: "rgba(75, 192, 192, 0.2)" }, // Group 4: 거스름돈 & 적립 포인트 계산
+  { start: 28, end: 39, color: "rgba(153, 102, 255, 0.2)" }, // Group 5: 주문 결과 가공 및 출력
+];
