@@ -25,7 +25,13 @@ interface QuizSectionProps {
   incorrectFeedback: string;
 }
 
-function CodeSnippet({ code }: { code: string }) {
+function CodeSnippet({
+  code,
+  highlightLines,
+}: {
+  code: string;
+  highlightLines?: number[];
+}) {
   return (
     <Highlight theme={themes.vsDark} code={code} language="javascript">
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
@@ -40,13 +46,25 @@ function CodeSnippet({ code }: { code: string }) {
             margin: "0",
           }}
         >
-          {tokens.map((line, i) => (
-            <div key={i} {...getLineProps({ line })}>
-              {line.map((token, key) => (
-                <span key={key} {...getTokenProps({ token })} />
-              ))}
-            </div>
-          ))}
+          {tokens.map((line, i) => {
+            const lineNumber = i + 1;
+            const isHighlighted = highlightLines?.includes(lineNumber) ?? false;
+            return (
+              <div
+                key={i}
+                {...getLineProps({ line })}
+                style={
+                  isHighlighted
+                    ? { backgroundColor: "rgba(255, 220, 100, 0.18)", borderLeft: "3px solid #f5c842", paddingLeft: "6px", marginLeft: "-9px" }
+                    : { paddingLeft: "9px" }
+                }
+              >
+                {line.map((token, key) => (
+                  <span key={key} {...getTokenProps({ token })} />
+                ))}
+              </div>
+            );
+          })}
         </pre>
       )}
     </Highlight>
@@ -295,7 +313,10 @@ function Step4Page() {
                 특정 도메인 지식을 가진 기능 단위 함수
               </p>
               <div className="step4-page__hierarchy-layer-examples">
-                <CodeSnippet code={DOMAIN_FUNCTIONS_CODE} />
+                <CodeSnippet
+                  code={DOMAIN_FUNCTIONS_CODE}
+                  highlightLines={[6, 7, 8, 9, 10, 11, 12, 14, 15, 16, 17, 18, 19, 20]}
+                />
               </div>
             </div>
 
