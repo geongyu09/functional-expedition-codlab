@@ -1,4 +1,4 @@
-import { CircleCheckIcon, LightbulbIcon } from '../icons'
+import { CircleCheckIcon, LightbulbIcon } from '../../../../components/Icons'
 import {
   EXPLANATION_INTRO,
   EXPLANATION_ITEMS,

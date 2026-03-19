@@ -1,5 +1,5 @@
 import { Highlight, themes } from 'prism-react-renderer'
-import { FileCodeIcon } from '../icons'
+import { FileCodeIcon } from '../Icons'
 import './CodePanel.css'
 
 export interface HighlightGroup {

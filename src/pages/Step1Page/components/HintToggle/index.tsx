@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { ChevronDownIcon } from '../icons'
+import { ChevronDownIcon } from '../../../../components/Icons'
 import { HINTS } from '../../data'
 import './HintToggle.css'
 

@@ -133,6 +133,7 @@ function Step3Page() {
               <button
                 className={`step3-page__tab ${activeTab === "test" ? "step3-page__tab--active" : ""}`}
                 onClick={() => setActiveTab("test")}
+                disabled={!q2Unlocked}
               >
                 테스트 코드
               </button>

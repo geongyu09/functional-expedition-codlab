@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "d3": "^7.9.0",
     "prism-react-renderer": "^2.4.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -19,6 +20,7 @@
   "devDependencies": {
     "@eslint/js": "^9.21.0",
     "@react-grab/mcp": "^0.1.28",
+    "@types/d3": "^7.4.3",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react-swc": "^3.8.0",

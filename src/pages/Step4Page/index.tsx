@@ -241,6 +241,7 @@ function Step4Page() {
                   "'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace",
                 fontSize: 14,
               }}
+              disabled={testResult?.passed ?? false}
             />
           </div>
 

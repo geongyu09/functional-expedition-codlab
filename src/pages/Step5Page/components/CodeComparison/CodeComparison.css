@@ -1,0 +1,24 @@
+.code-comparison {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.code-comparison__panel {
+  flex: 1;
+  min-width: 0;
+}
+
+.code-comparison__title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #8b949e;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 1024px) {
+  .code-comparison {
+    flex-direction: column;
+  }
+}
