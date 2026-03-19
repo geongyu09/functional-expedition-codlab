@@ -6,7 +6,10 @@
       "Bash(bunx tsc:*)",
       "Bash(bunx vite:*)",
       "Bash(npx tsc:*)",
-      "Bash(bun tsc:*)"
+      "Bash(bun tsc:*)",
+      "Bash(echo \"EXIT: $?\")",
+      "Bash(echo \"VITE BUILD EXIT: $?\")",
+      "Bash(bun x:*)"
     ]
   }
 }

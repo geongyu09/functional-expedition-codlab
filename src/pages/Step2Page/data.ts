@@ -1,4 +1,7 @@
-import type { CodeBlock, CodeSegment, FunctionSignature } from './types'
+import type { CodeBlock, CodeSegment, FunctionSignature } from "./types";
+
+export const QUIZ_QUESTION =
+  "processOrder 함수는 하는 역할에 따라 총 7개로 나누어 볼 수 있습니다.\n직접 processOrder 함수 내부의 코드를 마우스로 끌어서 함수를 작게 분리해보세요.";
 
 export const CODE_BLOCKS: CodeBlock[] = [
   {
@@ -43,32 +46,48 @@ export const CODE_BLOCKS: CodeBlock[] = [
     matchesSignatureId: 7,
     isExpression: false,
   },
-]
+];
 
 export const FULL_FUNCTION_SEGMENTS: CodeSegment[] = [
-  { id: 's0', type: 'static', code: 'function processOrder(menuList, orderedMenus, money) {\n  // 구매 가능한 메뉴 필터링\n  const availableMenus = filterMenuList(menuList, money);\n\n  // \'구매 가능한 메뉴\' 중에서 주문한 메뉴 정보 가져오기\n  const orderedItems = ' },
-  { id: 'b1', type: 'block', blockId: 1 },
-  { id: 's1', type: 'static', code: ';\n\n  // 총 주문 금액 계산\n  ' },
-  { id: 'b2', type: 'block', blockId: 2 },
-  { id: 's2', type: 'static', code: '\n\n  // 총 칼로리 계산 (유틸 함수 재사용을 유도하기 위해)\n  // [?] 칼로리 계산이 \'주문\'하는 책임에 포함될까?\n  ' },
-  { id: 'b3', type: 'block', blockId: 3 },
-  { id: 's3', type: 'static', code: '\n\n  // 적립 포인트 및 거스름돈 계산\n  const point = ' },
-  { id: 'b4', type: 'block', blockId: 4 },
-  { id: 's4', type: 'static', code: ';\n  const change = ' },
-  { id: 'b5', type: 'block', blockId: 5 },
-  { id: 's5', type: 'static', code: ';\n\n  // 메뉴 이름만 추출\n  ' },
-  { id: 'b6', type: 'block', blockId: 6 },
-  { id: 's6', type: 'static', code: '\n\n  // 최종 결과 출력\n  ' },
-  { id: 'b7', type: 'block', blockId: 7 },
-  { id: 's7', type: 'static', code: '\n}\n\n// 실행 예시\nprocessOrder(menuList, ["볶음밥", "군만두", "냉우동"], 30000);' },
-]
+  {
+    id: "s0",
+    type: "static",
+    code: "function processOrder(menuList, orderedMenus, money) {\n  // 구매 가능한 메뉴 필터링\n  const availableMenus = filterMenuList(menuList, money);\n\n  // '구매 가능한 메뉴' 중에서 주문한 메뉴 정보 가져오기\n  const orderedItems = ",
+  },
+  { id: "b1", type: "block", blockId: 1 },
+  { id: "s1", type: "static", code: ";\n\n  // 총 주문 금액 계산\n  " },
+  { id: "b2", type: "block", blockId: 2 },
+  {
+    id: "s2",
+    type: "static",
+    code: "\n\n  // 총 칼로리 계산 (유틸 함수 재사용을 유도하기 위해)\n  // [?] 칼로리 계산이 '주문'하는 책임에 포함될까?\n  ",
+  },
+  { id: "b3", type: "block", blockId: 3 },
+  {
+    id: "s3",
+    type: "static",
+    code: "\n\n  // 적립 포인트 및 거스름돈 계산\n  const point = ",
+  },
+  { id: "b4", type: "block", blockId: 4 },
+  { id: "s4", type: "static", code: ";\n  const change = " },
+  { id: "b5", type: "block", blockId: 5 },
+  { id: "s5", type: "static", code: ";\n\n  // 메뉴 이름만 추출\n  " },
+  { id: "b6", type: "block", blockId: 6 },
+  { id: "s6", type: "static", code: "\n\n  // 최종 결과 출력\n  " },
+  { id: "b7", type: "block", blockId: 7 },
+  {
+    id: "s7",
+    type: "static",
+    code: '\n}\n\n// 실행 예시\nprocessOrder(menuList, ["볶음밥", "군만두", "냉우동"], 30000);',
+  },
+];
 
 export const ABSTRACTED_CODE = `function processOrder(menuList, orderedMenus, money) {
   // 구매 가능한 메뉴 필터링
   const availableMenus = filterMenuList(menuList, money);
 
   // '구매 가능한 메뉴' 중에서 주문한 메뉴 정보 가져오기
-  const orderedItems = getOrderedItems(availableMenus, orderedMenus);
+  const orderedItems = getOrderedItems(orderedMenus);
 
   // 총 주문 금액 계산
   const totalPrice = calculateTotalPrice(orderedItems);
@@ -88,42 +107,43 @@ export const ABSTRACTED_CODE = `function processOrder(menuList, orderedMenus, mo
 }
 
 // 실행 예시
-processOrder(menuList, ["볶음밥", "군만두", "냉우동"], 30000);`
+processOrder(menuList, ["볶음밥", "군만두", "냉우동"], 30000);`;
 
 export const FUNCTION_SIGNATURES: FunctionSignature[] = [
   {
     id: 1,
-    signature: 'getOrderedItems(menuList, orderedMenus)',
-    functionName: 'getOrderedItems',
+    signature: "getOrderedItems(orderedMenus)",
+    functionName: "getOrderedItems",
   },
   {
     id: 2,
-    signature: 'calculateTotalPrice(orderedItems)',
-    functionName: 'calculateTotalPrice',
+    signature: "calculateTotalPrice(orderedItems)",
+    functionName: "calculateTotalPrice",
   },
   {
     id: 3,
-    signature: 'calculateTotalKcal(orderedItems)',
-    functionName: 'calculateTotalKcal',
+    signature: "calculateTotalKcal(orderedItems)",
+    functionName: "calculateTotalKcal",
   },
   {
     id: 4,
-    signature: 'calculatePoint(totalPrice)',
-    functionName: 'calculatePoint',
+    signature: "calculatePoint(totalPrice)",
+    functionName: "calculatePoint",
   },
   {
     id: 5,
-    signature: 'calculateChange(money, totalPrice)',
-    functionName: 'calculateChange',
+    signature: "calculateChange(money, totalPrice)",
+    functionName: "calculateChange",
   },
   {
     id: 6,
-    signature: 'getMenuNames(orderedItems)',
-    functionName: 'getMenuNames',
+    signature: "getMenuNames(orderedItems)",
+    functionName: "getMenuNames",
   },
   {
     id: 7,
-    signature: 'printReceipt(orderedMenuNames, totalPrice, totalKcal, change, point)',
-    functionName: 'printReceipt',
+    signature:
+      "printReceipt(orderedMenuNames, totalPrice, totalKcal, change, point)",
+    functionName: "printReceipt",
   },
-]
+];

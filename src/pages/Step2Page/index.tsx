@@ -3,7 +3,7 @@ import StepHeader from '../Step1Page/components/StepHeader'
 import FullCodeView from './components/FullCodeView'
 import FunctionDropZone from './components/FunctionDropZone'
 import useDragAndDrop from './hooks/useDragAndDrop'
-import { CODE_BLOCKS, FUNCTION_SIGNATURES } from './data'
+import { CODE_BLOCKS, FUNCTION_SIGNATURES, QUIZ_QUESTION } from './data'
 import type { DropZoneState } from './types'
 import './Step2Page.css'
 
@@ -32,6 +32,11 @@ function Step2Page() {
     <main className="step2-page">
       <StepHeader step={2} title="코드 블록을 함수로 추출하기" />
       <div className="step2-page__body">
+        <div className="step2-page__quiz-panel">
+          <p className="step2-page__question-number">Q2</p>
+          <p className="step2-page__question-text">{QUIZ_QUESTION}</p>
+        </div>
+        <div className="step2-page__divider" />
         <div className="step2-page__left-panel">
           <p className="step2-page__left-panel-title">processOrder 함수</p>
           <FullCodeView

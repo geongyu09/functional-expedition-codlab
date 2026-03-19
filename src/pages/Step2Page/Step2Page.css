@@ -20,9 +20,36 @@
   flex-shrink: 0;
 }
 
-.step2-page__left-panel {
-  width: 520px;
+.step2-page__quiz-panel {
+  width: 436px;
   flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  gap: 24px;
+  background-color: #0d1117;
+  overflow-y: auto;
+}
+
+.step2-page__question-number {
+  color: #238636;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.step2-page__question-text {
+  color: #e6edf3;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 0;
+  white-space: pre-line;
+}
+
+.step2-page__left-panel {
+  flex: 1;
   display: flex;
   flex-direction: column;
   padding: 24px;
@@ -41,7 +68,8 @@
 }
 
 .step2-page__right-panel {
-  flex: 1;
+  width: 436px;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   padding: 24px;

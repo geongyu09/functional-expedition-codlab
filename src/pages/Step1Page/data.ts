@@ -1,58 +1,58 @@
-import type { QuizOption, HintItem, ExplanationItem } from './types'
+import type { QuizOption, HintItem, ExplanationItem } from "./types";
 
 export const QUIZ_QUESTION =
-  'processOrder 함수에서 "액션"에 해당하는 줄은 몇 개일까요?'
+  "processOrder 함수에는 크게 몇 개의 행동으로 나누어볼 수 있을까요?";
 
 export const QUIZ_OPTIONS: QuizOption[] = [
-  { id: 'A', text: '1개' },
-  { id: 'B', text: '2개' },
-  { id: 'C', text: '3개' },
-  { id: 'D', text: '4개' },
-]
+  { id: "A", text: "1개" },
+  { id: "B", text: "2개" },
+  { id: "C", text: "3개" },
+  { id: "D", text: "4개" },
+];
 
-export const CORRECT_OPTION_ID = 'D'
+export const CORRECT_OPTION_ID = "D";
 
 export const HINTS: HintItem[] = [
   {
-    emoji: '💡',
-    text: '액션은 호출 시점이나 횟수에 따라 결과가 달라지는 코드입니다.',
+    emoji: "💡",
+    text: "액션은 호출 시점이나 횟수에 따라 결과가 달라지는 코드입니다.",
   },
   {
-    emoji: '🔍',
-    text: '함수 인자로 받은 값을 읽거나 계산만 하는 코드는 액션이 아닙니다.',
+    emoji: "🔍",
+    text: "함수 인자로 받은 값을 읽거나 계산만 하는 코드는 액션이 아닙니다.",
   },
   {
-    emoji: '📌',
-    text: '외부 세계에 영향을 주거나 외부 세계로부터 영향을 받는 코드를 찾아보세요.',
+    emoji: "📌",
+    text: "외부 세계에 영향을 주거나 외부 세계로부터 영향을 받는 코드를 찾아보세요.",
   },
-]
+];
 
 export const EXPLANATION_INTRO =
-  'processOrder 함수에는 총 4개의 액션이 포함되어 있습니다.'
+  "processOrder 함수에는 총 4개의 액션이 포함되어 있습니다.";
 
 export const EXPLANATION_ITEMS: ExplanationItem[] = [
   {
-    emoji: '1️⃣',
-    text: 'filterMenuList(menuList, money) — 외부 함수 호출로 부수효과가 있을 수 있습니다.',
+    emoji: "1️⃣",
+    text: "filterMenuList(menuList, money) — 외부 함수 호출로 부수효과가 있을 수 있습니다.",
   },
   {
-    emoji: '2️⃣',
+    emoji: "2️⃣",
     text: 'console.log("주문 내역:", ...) — 외부 세계(콘솔)에 출력하는 액션입니다.',
   },
   {
-    emoji: '3️⃣',
+    emoji: "3️⃣",
     text: 'console.log("결제 금액:", ...) — 동일하게 외부 출력 액션입니다.',
   },
   {
-    emoji: '4️⃣',
-    text: 'console.log x 3 — 각 콘솔 출력은 독립된 액션으로 셉니다.',
+    emoji: "4️⃣",
+    text: "console.log x 3 — 각 콘솔 출력은 독립된 액션으로 셉니다.",
   },
-]
+];
 
 export const EXPLANATION_SUMMARY =
-  'console.log는 외부 환경에 영향을 주는 대표적인 액션입니다. 계산(calculation)은 순수하게 값을 반환하는 코드이며, 액션과 명확히 분리해야 합니다.'
+  "console.log는 외부 환경에 영향을 주는 대표적인 액션입니다. 계산(calculation)은 순수하게 값을 반환하는 코드이며, 액션과 명확히 분리해야 합니다.";
 
-export const CODE_FILENAME = 'order.js'
+export const CODE_FILENAME = "order.js";
 
 export const CODE_SOURCE = `// 주문을 처리하고 레시피를 발행하는 함수
 // 입력: 주문하고 싶은 메뉴들, 내가 가지고 있는 금액(0원 이상)
@@ -96,4 +96,4 @@ function processOrder(menuList, orderedMenus, money) {
 }
 
 // 실행 예시
-processOrder(menuList, ["볶음밥", "군만두", "냉우동"], 30000);`
+processOrder(menuList, ["볶음밥", "군만두", "냉우동"], 30000);`;
