@@ -10,7 +10,8 @@
       "Bash(echo \"EXIT: $?\")",
       "Bash(echo \"VITE BUILD EXIT: $?\")",
       "Bash(bun x:*)",
-      "Bash(echo \"EXIT:$?\")"
+      "Bash(echo \"EXIT:$?\")",
+      "Bash(jobs:*)"
     ]
   }
 }

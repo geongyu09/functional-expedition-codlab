@@ -39,22 +39,35 @@ function validateTestResult(result: unknown): TestResult {
 }
 
 function runUserCode(userCode: string): TestResult {
-  try {
-    const fnWrapper = new Function(`
-      const menuList = ${JSON.stringify(TEST_MENU_LIST)};
-      ${userCode}
-      return getOrderedItems(menuList, ${JSON.stringify(TEST_INPUT)});
-    `);
+  const menuListJson = JSON.stringify(TEST_MENU_LIST);
+  const targetMenusJson = JSON.stringify(TEST_INPUT);
 
-    const result: unknown = fnWrapper();
-    return validateTestResult(result);
-  } catch (error) {
-    const message =
-      error instanceof Error
-        ? error.message
-        : "알 수 없는 오류가 발생했습니다.";
-    return { passed: false, message: `오류 발생: ${message}` };
+  const signatures = [
+    `getOrderedItems(${menuListJson}, ${targetMenusJson})`,
+    `getOrderedItems(${targetMenusJson}, ${menuListJson})`,
+  ];
+
+  let lastError: string | null = null;
+
+  for (const call of signatures) {
+    try {
+      const fnWrapper = new Function(`
+        ${userCode}
+        return ${call};
+      `);
+      const result: unknown = fnWrapper();
+      const testResult = validateTestResult(result);
+      if (testResult.passed) return testResult;
+      lastError = testResult.message;
+    } catch (error) {
+      lastError =
+        error instanceof Error
+          ? `오류 발생: ${error.message}`
+          : "알 수 없는 오류가 발생했습니다.";
+    }
   }
+
+  return { passed: false, message: lastError ?? "테스트 실패" };
 }
 
 interface UseStep3Return {

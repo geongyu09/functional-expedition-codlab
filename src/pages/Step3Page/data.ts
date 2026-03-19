@@ -6,12 +6,22 @@ export interface MenuItem {
   kcal: number;
 }
 
-export const INITIAL_CODE = `// 전역 변수 menuList를 직접 참조하지 말고, 매개변수로 받아보세요! 
+export const INITIAL_CODE = `const menuList = [
+  { name: "삼선짬뽕", price: 12000, kcal: 800 },
+  { name: "볶음밥",   price: 6000,  kcal: 700 },
+  { name: "탕수육",   price: 18000, kcal: 980 },
+  { name: "군만두",   price: 5000,  kcal: 420 },
+  { name: "냉우동",   price: 8500,  kcal: 580 },
+  { name: "짜장면",   price: 7000,  kcal: 620 },
+];
+
+
+// 전역 변수 menuList를 직접 참조하지 말고, 매개변수로 받아보세요!
 // 함수의 시그니처를 테스트 코드를 바탕으로 변경해보세요!
 
-// [A]: 전역 변수 참조
 function getOrderedItems(targetMenus) {
-  const orderedItems = menuList.filter((menu) => targetMenus.includes(menu.name));
+  const orderedItems = menuList.filter((menu) =>
+    targetMenus.includes(menu.name));
 
   return orderedItems;
 }`;
