@@ -16,7 +16,7 @@
 /* ── Quiz Panel ─────────────────────────────────── */
 
 .step4-page__quiz-panel {
-  width: 460px;
+  width: 400px;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
@@ -234,24 +234,21 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow-y: auto;
+  background-color: #0d1117;
 }
 
 .step4-page__textarea {
   flex: 1;
   width: 100%;
   box-sizing: border-box;
-  resize: none;
-  border: none;
-  outline: none;
-  padding: 20px 24px;
-  background-color: #0d1117;
+  background-color: transparent;
   color: #e6edf3;
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
   font-size: 14px;
   line-height: 1.7;
   tab-size: 2;
-  overflow-y: auto;
+  min-height: 100%;
 }
 
 .step4-page__code-footer {
@@ -297,7 +294,7 @@
 /* ── Hierarchy Panel ─────────────────────────────── */
 
 .step4-page__hierarchy-panel {
-  width: 480px;
+  width: 520px;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;

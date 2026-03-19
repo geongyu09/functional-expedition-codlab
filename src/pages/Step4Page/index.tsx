@@ -1,11 +1,15 @@
 import { useNavigate } from "react-router-dom";
 import { Highlight, themes } from "prism-react-renderer";
+import Editor from "react-simple-code-editor";
 import StepHeader from "../Step1Page/components/StepHeader";
 import useStep4 from "./hooks/useStep4";
 import {
   CALCULATE_TOTAL_PRICE_CODE,
   CALCULATE_TOTAL_KCAL_CODE,
   PROCESS_ORDER_CODE,
+  DOMAIN_FUNCTIONS_CODE,
+  UTIL_FUNCTIONS_CODE,
+  JS_BUILTIN_CODE,
 } from "./data";
 import type { QuizState, QuizChoice } from "./types";
 import "./Step4Page.css";
@@ -19,6 +23,34 @@ interface QuizSectionProps {
   onSelect: (choice: QuizChoice) => void;
   correctFeedback: string;
   incorrectFeedback: string;
+}
+
+function CodeSnippet({ code }: { code: string }) {
+  return (
+    <Highlight theme={themes.vsDark} code={code} language="javascript">
+      {({ className, style, tokens, getLineProps, getTokenProps }) => (
+        <pre
+          className={`step4-page__readonly-code ${className}`}
+          style={{
+            ...style,
+            fontSize: "12px",
+            padding: "12px",
+            overflowX: "auto",
+            textAlign: "left",
+            margin: "0",
+          }}
+        >
+          {tokens.map((line, i) => (
+            <div key={i} {...getLineProps({ line })}>
+              {line.map((token, key) => (
+                <span key={key} {...getTokenProps({ token })} />
+              ))}
+            </div>
+          ))}
+        </pre>
+      )}
+    </Highlight>
+  );
 }
 
 function QuizSection({
@@ -75,6 +107,22 @@ const LAYER_CHOICES: { value: QuizChoice; label: string }[] = [
   { value: "C", label: "C. 유틸 함수" },
   { value: "D", label: "D. 기본 JS 기능" },
 ];
+
+const highlightCode = (code: string) => (
+  <Highlight theme={themes.vsDark} code={code} language="javascript">
+    {({ tokens, getLineProps, getTokenProps }) => (
+      <>
+        {tokens.map((line, i) => (
+          <div key={i} {...getLineProps({ line })}>
+            {line.map((token, key) => (
+              <span key={key} {...getTokenProps({ token })} />
+            ))}
+          </div>
+        ))}
+      </>
+    )}
+  </Highlight>
+);
 
 function Step4Page() {
   const navigate = useNavigate();
@@ -173,24 +221,26 @@ function Step4Page() {
           <div className="step4-page__readonly-blocks">
             <div className="step4-page__readonly-block">
               <p className="step4-page__readonly-label">참고 (읽기 전용)</p>
-              <pre className="step4-page__readonly-code">
-                {CALCULATE_TOTAL_PRICE_CODE}
-              </pre>
+              <CodeSnippet code={CALCULATE_TOTAL_PRICE_CODE} />
             </div>
             <div className="step4-page__readonly-block">
               <p className="step4-page__readonly-label">참고 (읽기 전용)</p>
-              <pre className="step4-page__readonly-code">
-                {CALCULATE_TOTAL_KCAL_CODE}
-              </pre>
+              <CodeSnippet code={CALCULATE_TOTAL_KCAL_CODE} />
             </div>
           </div>
 
           <div className="step4-page__editor-wrapper">
-            <textarea
-              className="step4-page__textarea"
+            <Editor
               value={code}
-              onChange={(e) => handleCodeChange(e.target.value)}
-              spellCheck={false}
+              onValueChange={(newCode) => handleCodeChange(newCode)}
+              highlight={highlightCode}
+              padding={24}
+              className="step4-page__textarea"
+              style={{
+                fontFamily:
+                  "'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace",
+                fontSize: 14,
+              }}
             />
           </div>
 
@@ -225,7 +275,7 @@ function Step4Page() {
         {/* Hierarchy Panel */}
         <div className="step4-page__hierarchy-panel">
           <div className="step4-page__panel-header">
-            <p className="step4-page__panel-title">코드 계층</p>
+            <p className="step4-page__panel-title">전체 코드-계층별 분리</p>
           </div>
           <div className="step4-page__hierarchy-body">
             <div className="step4-page__hierarchy-layer step4-page__hierarchy-layer--business">
@@ -234,29 +284,7 @@ function Step4Page() {
                 도메인 규칙과 흐름을 조율하는 최상위 계층
               </p>
               <div className="step4-page__hierarchy-layer-examples">
-                <Highlight theme={themes.vsDark} code={PROCESS_ORDER_CODE} language="javascript">
-                  {({ className, style, tokens, getLineProps, getTokenProps }) => (
-                    <pre
-                      className={`step4-page__readonly-code ${className}`}
-                      style={{
-                        ...style,
-                        fontSize: "12px",
-                        padding: "12px",
-                        overflowX: "auto",
-                        textAlign: "left",
-                        margin: "0",
-                      }}
-                    >
-                      {tokens.map((line, i) => (
-                        <div key={i} {...getLineProps({ line })}>
-                          {line.map((token, key) => (
-                            <span key={key} {...getTokenProps({ token })} />
-                          ))}
-                        </div>
-                      ))}
-                    </pre>
-                  )}
-                </Highlight>
+                <CodeSnippet code={PROCESS_ORDER_CODE} />
               </div>
             </div>
 
@@ -266,15 +294,7 @@ function Step4Page() {
                 특정 도메인 지식을 가진 기능 단위 함수
               </p>
               <div className="step4-page__hierarchy-layer-examples">
-                <span className="step4-page__hierarchy-fn">
-                  calculateTotalPrice()
-                </span>
-                <span className="step4-page__hierarchy-fn">
-                  calculateTotalKcal()
-                </span>
-                <span className="step4-page__hierarchy-fn">
-                  getOrderedItems()
-                </span>
+                <CodeSnippet code={DOMAIN_FUNCTIONS_CODE} />
               </div>
             </div>
 
@@ -284,9 +304,7 @@ function Step4Page() {
                 도메인에 종속되지 않고 재사용 가능한 함수
               </p>
               <div className="step4-page__hierarchy-layer-examples">
-                <span className="step4-page__hierarchy-fn step4-page__hierarchy-fn--highlight">
-                  sum(items, property)
-                </span>
+                <CodeSnippet code={UTIL_FUNCTIONS_CODE} />
               </div>
             </div>
 
@@ -296,9 +314,7 @@ function Step4Page() {
                 언어에서 기본 제공하는 내장 기능
               </p>
               <div className="step4-page__hierarchy-layer-examples">
-                <span className="step4-page__hierarchy-fn">Array.filter()</span>
-                <span className="step4-page__hierarchy-fn">for loop</span>
-                <span className="step4-page__hierarchy-fn">Math.floor()</span>
+                <CodeSnippet code={JS_BUILTIN_CODE} />
               </div>
             </div>
           </div>

@@ -1,13 +1,29 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Highlight, themes } from "prism-react-renderer";
+import Editor from "react-simple-code-editor";
 import StepHeader from "../Step1Page/components/StepHeader";
 import useStep3 from "./hooks/useStep3";
 import { FULL_CODE_LINES, TEST_CODE } from "./data";
-import type { FullCodeLine } from "./types";
 import "./Step3Page.css";
 
 const fullCodeString = FULL_CODE_LINES.map((line) => line.content).join("\n");
+
+const highlightCode = (code: string) => (
+  <Highlight theme={themes.vsDark} code={code} language="javascript">
+    {({ tokens, getLineProps, getTokenProps }) => (
+      <>
+        {tokens.map((line, i) => (
+          <div key={i} {...getLineProps({ line })}>
+            {line.map((token, key) => (
+              <span key={key} {...getTokenProps({ token })} />
+            ))}
+          </div>
+        ))}
+      </>
+    )}
+  </Highlight>
+);
 
 type ActiveTab = "test" | "code";
 
@@ -124,19 +140,30 @@ function Step3Page() {
           </div>
           <div className="step3-page__textarea-wrapper">
             {activeTab === "test" ? (
-              <textarea
-                className="step3-page__textarea step3-page__textarea--readonly"
+              <Editor
                 value={TEST_CODE}
+                onValueChange={() => {}}
+                highlight={highlightCode}
+                padding={20}
                 readOnly
-                spellCheck={false}
+                className="step3-page__textarea step3-page__textarea--readonly"
+                style={{
+                  fontFamily: "'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace",
+                  fontSize: 14,
+                }}
               />
             ) : (
-              <textarea
-                className="step3-page__textarea"
+              <Editor
                 value={code}
-                onChange={(e) => handleCodeChange(e.target.value)}
+                onValueChange={(newCode) => handleCodeChange(newCode)}
+                highlight={highlightCode}
+                padding={20}
                 disabled={!q2Unlocked}
-                spellCheck={false}
+                className="step3-page__textarea"
+                style={{
+                  fontFamily: "'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace",
+                  fontSize: 14,
+                }}
               />
             )}
           </div>

@@ -41,6 +41,72 @@ export const PROCESS_ORDER_CODE = `function processOrder(menuList, orderedMenus,
   printReceipt(orderedMenuNames, totalPrice, totalKcal, change, point);
 }`;
 
+export const DOMAIN_FUNCTIONS_CODE = `function getOrderedItems(menuList, targetMenus) {
+  const orderedItems = menuList.filter((menu) => targetMenus.includes(menu.name));
+  return orderedItems;
+}
+
+function calculateTotalPrice(orderedItems) {
+  let totalPrice = 0;
+  for (let i = 0; i < orderedItems.length; i++) {
+    totalPrice += orderedItems[i].price;
+  }
+  return totalPrice;
+}
+
+function calculateTotalKcal(orderedItems) {
+  let totalKcal = 0;
+  for (let i = 0; i < orderedItems.length; i++) {
+    totalKcal += orderedItems[i].kcal;
+  }
+  return totalKcal;
+}
+
+function calculatePoint(totalPrice) {
+  return multiply(totalPrice, 0.1);
+}
+
+function calculateChange(money, totalPrice) {
+  return subtract(money, totalPrice);
+}
+
+function getMenuNames(items) {
+  return filterElementByKey(items, "name")
+}
+
+function printReceipt(orderedMenuNames, totalPrice, totalKcal, change, point) {
+  console.log("주문 내역:", orderedMenuNames.join(", "));
+  console.log("결제 금액:", totalPrice, "원");
+  console.log("총 칼로리:", totalKcal, "kcal");
+  console.log("거스름돈:", change, "원");
+  console.log("적립 포인트:", point, "점");
+}`;
+
+export const UTIL_FUNCTIONS_CODE = `function subtract(a, b){
+  return a - b;
+}
+
+function multiply(a, b){
+  return a * b;
+}
+
+function filterElementByKey(items, key){
+  let names = [];
+  for (let i = 0; i < items.length; i++) {
+    names.push(items[i][key]);
+  }
+  return names;
+}`;
+
+export const JS_BUILTIN_CODE = `// Array.filter
+// Array.includes
+// Array.join
+// Array.push
+// for loop
+// length
+// console.log
+// arithmetic operators (-, *)`;
+
 import type { OrderItem } from './types'
 
 export const TEST_ITEMS: OrderItem[] = [
