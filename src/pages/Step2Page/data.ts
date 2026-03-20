@@ -60,7 +60,7 @@ export const FULL_FUNCTION_SEGMENTS: CodeSegment[] = [
   {
     id: "s2",
     type: "static",
-    code: "\n\n  // 총 칼로리 계산 (유틸 함수 재사용을 유도하기 위해)\n  // [?] 칼로리 계산이 '주문'하는 책임에 포함될까?\n  ",
+    code: "\n\n  // 총 칼로리 계산 (유틸 함수 재사용을 유도하기 위해)\n  ",
   },
   { id: "b3", type: "block", blockId: 3 },
   {

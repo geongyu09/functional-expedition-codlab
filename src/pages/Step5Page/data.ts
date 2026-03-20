@@ -127,8 +127,7 @@ export const BEFORE_CODE = `function processOrder(menuList, orderedMenus, money)
     totalPrice += orderedItems[i].price;
   }
 
-  // 총 칼로리 계산 (유틸 함수 재사용을 유도하기 위해)
-  // ❓ 칼로리 계산이 '주문'하는 책임에 포함될까?
+  // 총 칼로리 계산
   let totalKcal = 0;
   for (let i = 0; i < orderedItems.length; i++) {
     totalKcal += orderedItems[i].kcal;
