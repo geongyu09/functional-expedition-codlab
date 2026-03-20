@@ -5,7 +5,21 @@ export const QUIZ_QUESTION =
 
 export const CODE_FILENAME = "order.js";
 
-export const CODE_SOURCE = `// 주문을 처리하고 레시피를 발행하는 함수
+export const CODE_SOURCE = `let menuList = [
+  { name: "삼선짬뽕", price: 12000, kcal: 800 },
+  { name: "볶음밥", price: 6000, kcal: 700 },
+  { name: "유니짜장", price: 9000, kcal: 650 },
+  { name: "냉우동", price: 7000, kcal: 500 },
+  { name: "군만두", price: 5000, kcal: 400 },
+];
+
+// [C]: 가격을 기준으로 메뉴 필터링
+function filterMenuList(menus, money) {
+  const list = menus.filter((menu) => menu.price <= money);
+  return list;
+}
+
+// 주문을 처리하고 레시피를 발행하는 함수
 // 입력: 주문하고 싶은 메뉴들, 내가 가지고 있는 금액(0원 이상)
 // 출력: 주문한 메뉴들, 총 결제금액, 거스름 돈, 칼로리, 적립 포인트
 function processOrder(menuList, orderedMenus, money) {
@@ -22,7 +36,6 @@ function processOrder(menuList, orderedMenus, money) {
   }
 
   // 총 칼로리 계산 (유틸 함수 재사용을 유도하기 위해)
-  // ❓ 칼로리 계산이 '주문'하는 책임에 포함될까?
   let totalKcal = 0;
   for (let i = 0; i < orderedItems.length; i++) {
     totalKcal += orderedItems[i].kcal;
@@ -50,9 +63,10 @@ function processOrder(menuList, orderedMenus, money) {
 processOrder(menuList, ["볶음밥", "군만두", "냉우동"], 30000);`;
 
 export const CODE_HIGHLIGHTS: HighlightGroup[] = [
-  { start: 5, end: 6, color: "rgba(255, 99, 132, 0.2)" }, // Group 1: 구매 가능한 메뉴 필터링
-  { start: 8, end: 9, color: "rgba(54, 162, 235, 0.2)" }, // Group 2: 주문 가능한 메뉴 추출
-  { start: 11, end: 22, color: "rgba(255, 206, 86, 0.2)" }, // Group 3: 총 결제 금액 & 칼로리 계산
-  { start: 24, end: 26, color: "rgba(75, 192, 192, 0.2)" }, // Group 4: 거스름돈 & 적립 포인트 계산
-  { start: 28, end: 39, color: "rgba(153, 102, 255, 0.2)" }, // Group 5: 주문 결과 가공 및 출력
+  { start: 19, end: 20, color: "rgba(255, 99, 132, 0.2)" }, // Group 1: 구매 가능한 메뉴 필터링
+  { start: 22, end: 23, color: "rgba(54, 162, 235, 0.2)" }, // Group 2: 주문 가능한 메뉴 추출
+  { start: 25, end: 35, color: "rgba(255, 206, 86, 0.2)" }, // Group 3: 총 결제 금액 & 칼로리 계산
+  { start: 37, end: 39, color: "rgba(75, 192, 192, 0.2)" }, // Group 4: 거스름돈 & 적립 포인트 계산
+  { start: 41, end: 45, color: "rgba(153, 102, 255, 0.2)" }, // Group 5: 주문 결과 가공
+  { start: 47, end: 52, color: "rgba(255, 159, 64, 0.2)" }, // Group 6: 최종 결과 출력
 ];
