@@ -6,9 +6,9 @@ export const QUIZ_QUESTION =
 export const CODE_BLOCKS: CodeBlock[] = [
   {
     id: 1,
-    code: `menuList.filter((menu) => availableMenus.includes(menu.name))`,
+    code: `const orderedItems = menuList.filter((menu) => targetMenus.includes(menu.name));\n\nreturn orderedItems;`,
     matchesSignatureId: 1,
-    isExpression: true,
+    isExpression: false,
   },
   {
     id: 2,
@@ -52,7 +52,7 @@ export const FULL_FUNCTION_SEGMENTS: CodeSegment[] = [
   {
     id: "s0",
     type: "static",
-    code: "function processOrder(menuList, orderedMenus, money) {\n  // 구매 가능한 메뉴 필터링\n  const availableMenus = filterMenuList(menuList, money);\n\n  // '구매 가능한 메뉴' 중에서 주문한 메뉴 정보 가져오기\n  const orderedItems = ",
+    code: "function processOrder(menuList, orderedMenus, money) {\n  // 구매 가능한 메뉴 필터링\n  const availableMenus = filterMenuList(menuList, money);\n\n  // '구매 가능한 메뉴' 중에서 주문한 메뉴 정보 가져오기\n  ",
   },
   { id: "b1", type: "block", blockId: 1 },
   { id: "s1", type: "static", code: ";\n\n  // 총 주문 금액 계산\n  " },
@@ -112,7 +112,7 @@ processOrder(menuList, ["볶음밥", "군만두", "냉우동"], 30000);`;
 export const FUNCTION_SIGNATURES: FunctionSignature[] = [
   {
     id: 1,
-    signature: "getOrderedItems(orderedMenus)",
+    signature: "getOrderedItems(targetMenus)",
     functionName: "getOrderedItems",
   },
   {
