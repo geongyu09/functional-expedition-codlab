@@ -112,7 +112,7 @@ function Step5Page() {
             이때 JS의 기능은 노출하지 않도록 합니다.
           </p>
           <p className="step5-page__section-description">
-            이 덕분에 After 코드를 보면 뺴기의 순서가 잘못됐는지, 혹은
+            이 덕분에 After 코드를 보면 빼기의 순서가 잘못됐는지, 혹은
             반복문에서 Off-By-One 에러 등을 걱정할 필요가 없어진 것을 알 수
             있어요.
           </p>
