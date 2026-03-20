@@ -178,7 +178,8 @@ function Step4Page() {
           {/* Discussion Quote */}
           <blockquote className="step4-page__discussion-quote">
             문제를 풀기 전에 전체 코드와 각 계층의 설명을 확인해서, 어떤
-            기준으로 나누었는지, 그 기준은 합리적인지 페어와 이야기 나눠보세요.
+            기준으로 나누어졌을지, 그 기준은 합리적인지 페어와 이야기
+            나눠보세요.
           </blockquote>
 
           {/* Q1 */}
