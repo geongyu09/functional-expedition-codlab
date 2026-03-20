@@ -27,6 +27,18 @@
   overflow-y: auto;
 }
 
+.step4-page__discussion-quote {
+  border-left: 4px solid #238636;
+  background-color: #161b22;
+  padding: 12px 16px;
+  margin: 0;
+  border-radius: 0 6px 6px 0;
+  color: #8b949e;
+  font-size: 14px;
+  line-height: 1.7;
+  font-style: italic;
+}
+
 .step4-page__question-block {
   display: flex;
   flex-direction: column;

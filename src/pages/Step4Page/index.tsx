@@ -57,7 +57,12 @@ function CodeSnippet({
                 {...getLineProps({ line })}
                 style={
                   isHighlighted
-                    ? { backgroundColor: "rgba(255, 220, 100, 0.18)", borderLeft: "3px solid #f5c842", paddingLeft: "6px", marginLeft: "-9px" }
+                    ? {
+                        backgroundColor: "rgba(255, 220, 100, 0.18)",
+                        borderLeft: "3px solid #f5c842",
+                        paddingLeft: "6px",
+                        marginLeft: "-9px",
+                      }
                     : { paddingLeft: "9px" }
                 }
               >
@@ -170,6 +175,12 @@ function Step4Page() {
       <div className="step4-page__body">
         {/* Quiz Panel */}
         <div className="step4-page__quiz-panel">
+          {/* Discussion Quote */}
+          <blockquote className="step4-page__discussion-quote">
+            문제를 풀기 전에 전체 코드와 각 계층의 설명을 확인해서, 어떤
+            기준으로 나누었는지, 그 기준은 합리적인지 페어와 이야기 나눠보세요.
+          </blockquote>
+
           {/* Q1 */}
           <div className="step4-page__question-block">
             <p className="step4-page__question-number">Q1</p>
@@ -220,7 +231,7 @@ function Step4Page() {
               <div className="step4-page__divider-h" />
               <QuizSection
                 questionNumber="Q3"
-                questionText="calculateTotalPrice / calculateTotalKcal 함수는 어느 계층에 속할까요?"
+                questionText="그렇다면 calculateTotalPrice / calculateTotalKcal 함수는 어느 계층에 속할까요?"
                 choices={LAYER_CHOICES}
                 selected={q3Selected}
                 state={q3State}
@@ -241,11 +252,23 @@ function Step4Page() {
           <div className="step4-page__readonly-blocks">
             <div className="step4-page__readonly-block">
               <p className="step4-page__readonly-label">참고 (읽기 전용)</p>
-              <CodeSnippet code={q2Unlocked ? CALCULATE_TOTAL_PRICE_REFACTORED_CODE : CALCULATE_TOTAL_PRICE_CODE} />
+              <CodeSnippet
+                code={
+                  q2Unlocked
+                    ? CALCULATE_TOTAL_PRICE_REFACTORED_CODE
+                    : CALCULATE_TOTAL_PRICE_CODE
+                }
+              />
             </div>
             <div className="step4-page__readonly-block">
               <p className="step4-page__readonly-label">참고 (읽기 전용)</p>
-              <CodeSnippet code={q2Unlocked ? CALCULATE_TOTAL_KCAL_REFACTORED_CODE : CALCULATE_TOTAL_KCAL_CODE} />
+              <CodeSnippet
+                code={
+                  q2Unlocked
+                    ? CALCULATE_TOTAL_KCAL_REFACTORED_CODE
+                    : CALCULATE_TOTAL_KCAL_CODE
+                }
+              />
             </div>
           </div>
 
@@ -317,7 +340,9 @@ function Step4Page() {
               <div className="step4-page__hierarchy-layer-examples">
                 <CodeSnippet
                   code={DOMAIN_FUNCTIONS_CODE}
-                  highlightLines={[7, 8, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19, 20, 21, 22, 23]}
+                  highlightLines={[
+                    7, 8, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19, 20, 21, 22, 23,
+                  ]}
                 />
               </div>
             </div>
